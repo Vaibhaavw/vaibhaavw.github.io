@@ -37,7 +37,10 @@
       #home {
         background-position: center;
         background-size: cover;
-        background-image: url("https://4kwallpapers.com/images/wallpapers/gradient-background-6016x3384-11027.jpg");
+          height: 100vh;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
       }
       header a {
         transition: all 0.3s ease-in-out;
@@ -117,8 +120,37 @@
         object-fit: cover;
         border-radius: 50%;
       }
-    </style>
-  </head>
+    
+/* Soft Glowing Button */
+.btn {
+  transition: all 0.4s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #5ee6f8, 0 0 30px #0088ff;
+}
+
+</style>
+  
+<!-- Animate On Scroll -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Vanilla Tilt JS for 3D Card Effects -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+<!-- Particles.js Background -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+
+<!-- LottieFiles -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<!-- Vanta.js & Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.clouds.min.js"></script>
+
+</head>
   <body>
     <header
       class="text-white text-center py-4"
@@ -126,7 +158,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: rgba(0, 0, 0, 0.778);
+        background: rgba(0, 0, 0, 0);
         backdrop-filter: blur(8px);
       "
     >
@@ -196,7 +228,7 @@
               Software Developer
             </h2>
           </div>
-        </div>
+</div>
         <br /><br /><br />
         <div class="row">
           <div class="col text-center">
@@ -214,7 +246,7 @@
               >GitHub</a
             >
           </div>
-        </div>
+</div>
         <br /><br /><br />
       </div>
     </section>
@@ -617,7 +649,7 @@
       </div>
     </section>
 
-    <section class="text-dark py-5" id="projects">
+    <section class="text-dark py-5" data-aos="fade-up" id="projects">
       <div class="section-header text-center display-6 mb-3">
         <h1 class="text-white">Projects</h1>
       </div>
@@ -694,7 +726,7 @@
         </div>
       </div>
     </section>
-    <section class="text-dark py-5" id="certification">
+    <section class="text-dark py-5" data-aos="fade-up" id="certification">
       <div class="section-header text-center display-6 mb-3">
         <br />
         <h1 class="text-white text-center">Certifications & Achievements</h1>
@@ -704,7 +736,7 @@
         <div class="container py-5 d-flex align-items-center">
           <div class="row justify-content-center">
             <div class="col-lg-4 mb-3">
-              <img
+              <img data-aos="fade-right"
                 class="img-fluid rounded align-left"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg"
@@ -755,7 +787,7 @@
               </p>
             </div>
             <div class="col-lg-4">
-              <img
+              <img data-aos="fade-left"
                 class="img-fluid rounded"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg"
@@ -769,7 +801,7 @@
         <div class="container py-5 d-flex align-items-center">
           <div class="row justify-content-center">
             <div class="col-lg-4 mb-3">
-              <img
+              <img data-aos="fade-right"
                 class="img-fluid rounded align-left"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg"
@@ -821,7 +853,7 @@
               </p>
             </div>
             <div class="col-lg-4">
-              <img
+              <img data-aos="fade-left"
                 class="img-fluid rounded"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg"
@@ -835,7 +867,7 @@
         <div class="container py-5 d-flex align-items-center">
           <div class="row justify-content-center">
             <div class="col-lg-4 mb-3">
-              <img
+              <img data-aos="fade-right"
                 class="img-fluid rounded align-left"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg"
@@ -889,7 +921,7 @@
               </p>
             </div>
             <div class="col-lg-4">
-              <img
+              <img data-aos="fade-left"
                 class="img-fluid rounded"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg"
@@ -903,7 +935,7 @@
         <div class="container py-5 d-flex align-items-center">
           <div class="row justify-content-center">
             <div class="col-lg-4 mb-3">
-              <img
+              <img data-aos="fade-right"
                 class="img-fluid rounded align-left"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg"
@@ -952,7 +984,7 @@
               </p>
             </div>
             <div class="col-lg-4">
-              <img
+              <img data-aos="fade-left"
                 class="img-fluid rounded"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg"
@@ -965,7 +997,7 @@
         <div class="container py-5 d-flex align-items-center">
           <div class="row justify-content-center">
             <div class="col-lg-4 mb-3">
-              <img
+              <img data-aos="fade-right"
                 class="img-fluid rounded align-left"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg"
@@ -1009,7 +1041,7 @@
               </p>
             </div>
             <div class="col-lg-4">
-              <img
+              <img data-aos="fade-left"
                 class="img-fluid rounded"
                 alt="hero"
                 src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp2.jpeg"
@@ -1166,5 +1198,32 @@
         background-color: #1b79a4;
       }
     </style>
-  </body>
+  
+<script>
+  AOS.init({ duration: 1000 });
+
+  VanillaTilt.init(document.querySelectorAll(".card"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5,
+  });
+
+  // Apply Vanta CLOUDS to #home
+  VANTA.CLOUDS({
+    el: "#home",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    skyColor: 0x7dac,
+    cloudColor: 0xadc1de,
+    cloudShadowColor: 0x183550,
+    sunColor: 0xffd700,
+    sunlightColor: 0xffe4b5,
+    speed: 1.2
+  });
+</script>
+
+
+</body>
 </html>
