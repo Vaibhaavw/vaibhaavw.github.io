@@ -148,7 +148,8 @@
 
 <!-- Vanta.js & Three.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.clouds.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
 
 </head>
   <body>
@@ -1209,20 +1210,20 @@
     "max-glare": 0.5,
   });
 
-  // Apply Vanta CLOUDS to #home
-  VANTA.CLOUDS({
+  // Apply VANTA.WAVES to the #home section
+  VANTA.WAVES({
     el: "#home",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    skyColor: 0x7dac,
-    cloudColor: 0xadc1de,
-    cloudShadowColor: 0x183550,
-    sunColor: 0xffd700,
-    sunlightColor: 0xffe4b5,
-    speed: 1.2
+    color: 0x427,
+    shininess: 30,
+    waveHeight: 15,
+    waveSpeed: 1,
+    zoom: 1
   });
 </script>
+
 
 
 </body>
