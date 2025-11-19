@@ -1,1117 +1,1412 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- Animate On Scroll -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- Vanilla Tilt JS for 3D Card Effects -->
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+    <!-- Vanilla Tilt JS for 3D Card Effects -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
 
-  <!-- Particles.js Background -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Particles.js Background -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
+    <!-- LottieFiles -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <!-- LottieFiles -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Vanta.js & Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
 
-  <!-- Vanta.js & Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
+    <style>
+      .skills-card,
+      .hobbies-card {
+        width: 100%;
+        margin: 0 auto;
+        /* center the card */
+      }
 
-
-
-  <style>
-    .skills-card,
-    .hobbies-card {
-      width: 100%;
-      margin: 0 auto;
-      /* center the card */
-    }
-
-    body {
-      background-color: rgb(5, 4, 35);
-      /* background-image: url('https://wallpapercave.com/wp/wp4464940.jpg');
+      body {
+        background-color: rgb(5, 4, 35);
+        /* background-image: url('https://wallpapercave.com/wp/wp4464940.jpg');
       background-repeat: no-repeat; */
-  /* background-size: 100% 100%;
+        /* background-size: 100% 100%;
   background-position: top center;
   background-attachment: fixed; */
-  
-    }
+      }
 
-    a {
-      text-decoration: none;
-    }
-    .custom-header {
-      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-      font-size: 1.0rem;
-      line-height: 1.5;
-      letter-spacing: 0.7px;
-    }
+      a {
+        text-decoration: none;
+      }
+      .custom-header {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        letter-spacing: 0.7px;
+      }
 
-    header {
-      background: rgba(10, 10, 10, 0.489);
-      backdrop-filter: blur(10px);
-      padding: 5px;
-    }
+      header {
+        background: rgba(10, 10, 10, 0.489);
+        backdrop-filter: blur(10px);
+        padding: 5px;
+      }
 
-    #home {
-      background-position: center;
-      background-size: cover;
-      height: 100vh;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
+      #home {
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
 
-    header a {
-      transition: all 0.3s ease-in-out;
-    }
+      header a {
+        transition: all 0.3s ease-in-out;
+      }
 
-    header a:hover {
-      font-size: 1.2em;
-      text-shadow: 0 0 10px #87ceeb, 0 0 20px #87ceeb, 0 0 30px #87ceeb,
-        0 0 40px #87ceeb;
-    }
+      header a:hover {
+        font-size: 1.2em;
+        text-shadow: 0 0 10px #87ceeb, 0 0 20px #87ceeb, 0 0 30px #87ceeb,
+          0 0 40px #87ceeb;
+      }
 
-    h1.mb-3 {
-      font-size: 6em;
-    }
-
-    h2.mb-3 {
-      font-size: 3em;
-    }
-
-    @media (max-width: 768px) {
       h1.mb-3 {
+        font-size: 6em;
+      }
+
+      h2.mb-3 {
         font-size: 3em;
       }
 
-      h2.mb-3 {
-        font-size: 1.5em;
+      @media (max-width: 768px) {
+        h1.mb-3 {
+          font-size: 3em;
+        }
+
+        h2.mb-3 {
+          font-size: 1.5em;
+        }
+
+        .col-md-6 img {
+          width: 250px;
+          height: 250px;
+        }
       }
 
-      .col-md-6 img {
-        width: 250px;
-        height: 250px;
+      @media (max-width: 576px) {
+        h1.mb-3 {
+          font-size: 2.5em;
+        }
+
+        h2.mb-3 {
+          font-size: 1.2em;
+        }
+
+        .col-md-6 img {
+          width: 200px;
+          height: 200px;
+        }
       }
-    }
 
-    @media (max-width: 576px) {
-      h1.mb-3 {
-        font-size: 2.5em;
+      .card:hover {
+        box-shadow: 0 0 80px rgba(10, 10, 10, 0.9);
       }
 
-      h2.mb-3 {
-        font-size: 1.2em;
+      .square {
+        border-radius: 0 !important;
       }
 
-      .col-md-6 img {
-        width: 200px;
-        height: 200px;
+      .glowing {
+        font-family: "Times New Roman", Times, serif;
+        color: #ffffff;
+        text-shadow: 0 0 2px #87ceeb, 0 0 2px #87ceeb, 0 0 4px #87ceeb,
+          0 0 4px #87ceeb;
+        transition: all 0.8s ease-in-out;
       }
-    }
 
-    .card:hover {
-      box-shadow: 0 0 80px rgba(10, 10, 10, 0.9);
-    }
+      .btn.glowing:hover {
+        box-shadow: 0 0 5px rgb(203, 177, 255), 0 0 25px rgb(107, 107, 107),
+          0 0 50px rgb(106, 106, 106), 0 0 200px rgb(110, 110, 110);
+      }
 
-    .square {
-      border-radius: 0 !important;
-    }
+      #certification .img-fluid:hover {
+        transform: scale(2);
+        transition: transform 0.3s ease;
+      }
 
-    .glowing {
-      font-family: "Times New Roman", Times, serif;
-      color: #ffffff;
-      text-shadow: 0 0 2px #87ceeb, 0 0 2px #87ceeb, 0 0 4px #87ceeb,
-        0 0 4px #87ceeb;
-      transition: all 0.8s ease-in-out;
-    }
+      .section-header h1 {
+        font-size: 2em;
+        color: #000;
+      }
 
+      .section-header {
+        text-align: center;
+        padding-bottom: 20px;
+      }
 
-    .btn.glowing:hover {
-      box-shadow: 0 0 5px rgb(203, 177, 255), 0 0 25px rgb(107, 107, 107),
-        0 0 50px rgb(106, 106, 106), 0 0 200px rgb(110, 110, 110);
-    }
+      .progress-circle {
+        position: relative;
+        width: 120px;
+        height: 120px;
+      }
 
-    #certification .img-fluid:hover {
-      transform: scale(2);
-      transition: transform 0.3s ease;
-    }
+      .progress-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
 
-    .section-header h1 {
-      font-size: 2em;
-      color: #000;
-    }
+      /* Soft Glowing Button */
+      .btn {
+        transition: all 0.4s ease-in-out;
+      }
 
-    .section-header {
-      text-align: center;
-      padding-bottom: 20px;
-    }
+      .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px #5ee6f8, 0 0 30px #0088ff;
+      }
 
-    .progress-circle {
-      position: relative;
-      width: 120px;
-      height: 120px;
-    }
+      .footer {
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        background: rgba(15, 15, 15);
+        color: white;
+        padding: 40px 0;
+      }
 
-    .progress-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+      .footer .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
 
-    /* Soft Glowing Button */
-    .btn {
-      transition: all 0.4s ease-in-out;
-    }
+      .footer a {
+        color: #ccc;
+        text-decoration: none;
+      }
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #5ee6f8, 0 0 30px #0088ff;
-    }
+      .footer a:hover {
+        color: white;
+      }
 
-    .footer {
-      border-top-left-radius: 10%;
-      border-top-right-radius: 10%;
-      background: rgba(15, 15, 15);
-      color: white;
-      padding: 40px 0;
-    }
+      .footer .social-icons a {
+        color: #ccc;
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
 
-    .footer .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
+      .footer .social-icons a:hover {
+        color: white;
+      }
 
-    .footer a {
-      color: #ccc;
-      text-decoration: none;
-    }
+      .footer input {
+        border-radius: 20px;
+        padding: 10px;
+        width: 80%;
+        margin-bottom: 10px;
+      }
 
-    .footer a:hover {
-      color: white;
-    }
+      .footer input[type="submit"] {
+        background-color: #1c0c3c;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
 
-    .footer .social-icons a {
-      color: #ccc;
-      margin-right: 10px;
-      font-size: 1.2rem;
-    }
+      .footer input[type="submit"]:hover {
+        background-color: #00aa0e;
+      }
 
-    .footer .social-icons a:hover {
-      color: white;
-    }
+      /*<!-- Add Custom Font Styles Here -->*/
+      .custom-paragraph {
+        font-family: "Georgia", serif;
+        /* You can change this to any other font */
+        font-size: 1.1rem;
+        /* Adjust font size */
+        line-height: 1.6;
+        /* Adjust line height for better readability */
+        font-style: italic;
+        /* Optional: Italic style; */
+        letter-spacing: 0.8px;
+        /* Adjust letter spacing for a more elegant look */
+      }
 
-    .footer input {
-      border-radius: 20px;
-      padding: 10px;
-      width: 80%;
-      margin-bottom: 10px;
-    }
+      /* Increase the size of social media icons and names */
+      .social-media-list li a {
+        font-size: 1.2rem;
+        /* Adjusts the font size for the text */
+        line-height: 2rem;
+        /* Adds spacing between lines */
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
 
-    .footer input[type="submit"] {
-      background-color: #1c0c3c;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
+      .social-media-list li a i {
+        font-size: 2rem;
+        /* Adjusts the icon size */
+        margin-right: 10px;
+        /* Adds space between the icon and text */
+      }
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .social-section {
+        text-align: center;
+        padding: 3rem 1rem;
+      }
+      .social-section h2 {
+        font-weight: 700;
+        color: #4a4a4a;
+        margin-bottom: 2rem;
+      }
+      .social-icons a {
+        display: inline-block;
+        margin: 0 15px;
+        font-size: 2rem;
+        color: #fbfbfb;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #00eeff;
+      }
+      .social-label {
+        display: block;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        color: #6c757d;
+      }
 
-    .footer input[type="submit"]:hover {
-      background-color: #00aa0e;
-    }
+      .gradient-button {
+        font-family: "Rubik", sans-serif;
+        font-size: 1.1rem;
+        padding: 0.8rem 2.5rem;
+        border-radius: 50px;
+        backdrop-filter: blur(21px);
+        background: radial-gradient(
+            49.94% 52.2% at 40.72% 52.2%,
+            rgba(199, 255, 255, 0.47) 0%,
+            rgba(83, 221, 255, 0.31) 30.09%,
+            rgba(177, 47, 211, 0.19) 60%,
+            rgba(19, 0, 25, 0.1) 100%
+          ),
+          #1e002641;
+        transition: all 0.5s ease-out;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+      }
 
-    /*<!-- Add Custom Font Styles Here -->*/
-    .custom-paragraph {
-      font-family: "Georgia", serif;
-      /* You can change this to any other font */
-      font-size: 1.1rem;
-      /* Adjust font size */
-      line-height: 1.6;
-      /* Adjust line height for better readability */
-      font-style: italic;
-      /* Optional: Italic style; */
-      letter-spacing: 0.8px;
-      /* Adjust letter spacing for a more elegant look */
-    }
+      .gradient-button:hover {
+        padding-left: calc(2.5rem + 5px);
+        padding-right: calc(2.5rem + 10px);
+      }
 
-    /* Increase the size of social media icons and names */
-    .social-media-list li a {
-      font-size: 1.2rem;
-      /* Adjusts the font size for the text */
-      line-height: 2rem;
-      /* Adds spacing between lines */
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
+      .card-image {
+        top: 25%;
+        right: 5%;
+        width: 80px;
+        aspect-ratio: 436 / 397;
+      }
 
-    .social-media-list li a i {
-      font-size: 2rem;
-      /* Adjusts the icon size */
-      margin-right: 10px;
-      /* Adds space between the icon and text */
-    }
-        @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .social-section {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .social-section h2 {
-      font-weight: 700;
-      color: #4a4a4a;
-      margin-bottom: 2rem;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin: 0 15px;
-      font-size: 2rem;
-      color: #fbfbfb;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #00eeff;
-    }
-    .social-label {
-      display: block;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      color: #6c757d;
-    }
-    
-  </style>
-
-
-</head>
-
-<body>
-  <header class="text-white text-center py-4" style="
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        backdrop-filter: blur(8px);
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
-      ">
-    <nav class="d-flex flex-wrap justify-content-center align-items-center">
-      <a class="mx-2 my-1 text-white custom-header" href="#home"><b>Home</b></a>
-      <a class="mx-2 my-1 text-white custom-header" href="#aboutme"><b>About Me</b></a>
-      <a class="mx-2 my-1 text-white custom-header" href="#Language"><b>Languages & Technologies</b></a>
-      <a class="mx-2 my-1 text-white custom-header" href="#projects"><b>Projects</b></a>
-      <a class="mx-2 my-1 text-white custom-header" href="#certification"><b>Certifications</b></a>
-    </nav>
-  </header>
-
-  <section class="text-dark py-5" id="home" style="
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-      ">
-    <br /><br />
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Image Column -->
-        <div class="col-md-6 text-center">
-          <img alt="ecommerce" src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/v4.jpg"
-            alt="Example Image" class="img-fluid rounded-circle profile-img"
-            data-aos="fade-up"
-data-aos-delay="150"
-data-aos-duration="700"
-data-aos-easing="ease-out-cubic"
-
- style="
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
-                width: 400px;
-                height: 400px;
-              " />
-        </div>
-
-        <!-- Text Column -->
-        <div class="col-md-6 text-center text-md-left mt-4 mt-md-0">
-          <h1 class="mb-3 glowing display-4 display-md-3 display-lg-1"
-          data-aos="fade-up"
-    data-aos-delay="300">
-            Vaibhav Waghmare
-          </h1>
-          <h2 class="mb-3 glowing text-center text-md-left h3 h-md-2"
-          data-aos="fade-up"
-    data-aos-delay="500">
-            Full Stack Developer
-          </h2>
-        </div>
-      </div>
-
-      <br /><br /><br />
-    </div>
-  </section>
-
-  <section class="text-dark text-center py-5" data-aos="fade-up" id="aboutme" data-aos-delay="500" style="background-color: rgb(214, 214, 214);backdrop-filter: blur(4px);-webkit-backdrop-filter: blur(4px);">
-    <div class="container py-5">
-      <div class="section-header text-center display-6 mb-3">
-      <br />
-      <h1 class="text-auto">About Me</h1>
-    </div>
-      <div class="col-xl-6 col-lg-9 mx-auto text-center">
-        <br /><br />
-        <p class="lead text-auto custom-paragraph">
-          Entry-Level Full Stack Developer | Prompt Engineer | Generative AI Enthusiast | Front-End Developer | Data Analyst
-          <br />------------------------------------------------------------<br />
-          MCA student with hands-on experience building scalable web applications, RESTful APIs, and analytics dashboards using 
-modern technologies like React, Django, Python, and MongoDB. Proficient in data analysis using Python libraries (Pandas, 
-NumPy, Seaborn) and skilled in prompt engineering with GPT-4 and OpenAI APIs. Strong understanding of frontend 
-technologies and experience with cloud computing, machine learning, and cybersecurity. Passionate about applying AI and 
-full-stack development to build innovative, user-centric solutions.
-        </p>
-        <hr class="w-25 my-4" />
-        <h2 class="text-auto font-weight-medium text-uppercase text-sm">
-          Vaibhav Waghmare
-        </h2>
-        <p class="text-auto">Full Stack Developer</p>
-        <br /><br />
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="social-section" style="background: rgb(15, 15, 15);">
-    <h2>Social Media Handles</h2>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-        <span class="social-label">LinkedIn</span>
-      </a>
-      <a href="https://github.com/Vaibhaavw" target="_blank">
-        <i class="fab fa-github"></i>
-        <span class="social-label">GitHub</span>
-      </a>
-            <a href="https://t.me/vaibhaavw9527" target="_blank">
-        <i class="fab fa-telegram"></i>
-        <span class="social-label">Telegram</span>
-      </a>
-      <a href="https://www.instagram.com/mr.vaibhaav" target="_blank">
-        <i class="fab fa-instagram"></i>
-        <span class="social-label">Instagram</span>
-      </a>
-      <a href="https://www.facebook.com/Vaibhaav Waghmare" target="_blank">
-        <i class="fab fa-facebook"></i>
-        <span class="social-label">Facebook</span>
-      </a>
-    </div>
-  </section>
-
-  <section class="text-dark py-5" data-aos="fade-up" id="Language" data-aos-delay="500" style="
-        /* background: rgb(15, 15, 15); */
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0);
-      ">
-    <style>
       #Language .card {
-        background-color: rgba(31, 137, 144, 0.181);
+        background-color: rgba(0, 0, 0, 0.814);
         transition: all 0.3s ease-in-out;
         border-radius: 10px;
         /* Default shadow */
       }
 
       #Language .card:hover {
-        
         /* glowing shadow */
         border: 3px solid rgb(0, 229, 255);
         /* Optional border to enhance the glow */
       }
     </style>
-    <div class="section-header text-center display-6 mb-3">
-      <br />
-      <h1 class="text-white">Programming Languages & Frameworks</h1>
-    </div>
-    <div class="container py-5">
-      <div class="row">
-        <!-- Bootstrap Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png" alt="Bootstrap"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Bootstrap
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+  </head>
 
-        <!-- HTML Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://icones.pro/wp-content/uploads/2021/05/icone-html-bleue.png" alt="HTML"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  HTML
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
+  <body>
+    <header
+      class="text-white text-center py-4"
+      style="
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(8px);
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+      "
+    >
+      <nav class="d-flex flex-wrap justify-content-center align-items-center">
+        <a class="mx-2 my-1 text-white custom-header" href="#home"
+          ><b>Home</b></a
+        >
+        <a class="mx-2 my-1 text-white custom-header" href="#aboutme"
+          ><b>About Me</b></a
+        >
+        <a class="mx-2 my-1 text-white custom-header" href="#Language"
+          ><b>Languages & Technologies</b></a
+        >
+        <a class="mx-2 my-1 text-white custom-header" href="#projects"
+          ><b>Projects</b></a
+        >
+        <a class="mx-2 my-1 text-white custom-header" href="#certification"
+          ><b>Certifications</b></a
+        >
+      </nav>
+    </header>
 
-        <!-- CSS Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  CSS
-                </h2>
-              </div>
-            </div>
+    <section
+      class="text-dark py-5"
+      id="home"
+      style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px)"
+    >
+      <br /><br />
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-md-6 text-center">
+            <img
+              alt="ecommerce"
+              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/v4.jpg"
+              alt="Example Image"
+              class="img-fluid rounded-circle profile-img"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-duration="700"
+              data-aos-easing="ease-out-cubic"
+              style="
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                width: 400px;
+                height: 400px;
+              "
+            />
           </div>
-        </div>
 
-        <!-- Python Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://th.bing.com/th/id/OIP._1rRK1kdLzTITw_KQkT8YQAAAA?rs=1&pid=ImgDetMain" alt="Python"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Python
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Java Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://www.itrainu.in/wp-content/uploads/2022/01/java-img.jpg" alt="Java"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Java
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- C Language Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://www.kindpng.com/picc/m/403-4039227_c-language-logo-png-transparent-png.png"
-                    alt="C Language" class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  C Language
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- JavaScript Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow ">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  JavaScript
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ReactJS Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="ReactJS"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  ReactJS
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Node.js Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://tse1.mm.bing.net/th/id/OIP.2uFooAQy1Qm5AJve8A7cuwHaIO?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Node.js"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Node.js
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Express.js Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://th.bing.com/th/id/OIP.ANtKNynnw_CGu-E9kIrqcAAAAA?rs=1&pid=ImgDetMain"
-                    alt="Express.js" class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Express.js
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Django Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://image.pngaaa.com/344/1947344-middle.png" alt="Django" class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Django
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- MongoDB Card -->
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://technologypoint.in/wp-content/uploads/2021/06/MongoDB-sm-logo.gif" alt="MongoDB"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  MongoDB
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img src="https://c8.alamy.com/comp/F48AY6/blue-sql-icon-F48AY6.jpg" alt="SQL"
-                    class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  SQL
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 mb-4">
-          <div class="card border-1px shadow">
-            <div class="card-body text-center">
-              <div class="d-flex align-items-center justify-content-center my-3">
-                <div class="progress-circle">
-                  <img
-                    src="https://img.favpng.com/17/15/11/android-software-development-mobile-app-development-icon-png-favpng-Nav7vD1NPTP5meFUJDEhCeGvt.jpg"
-                    alt="Android" class="rounded-circle" />
-                </div>
-                <h2 class="card-title text-uppercase text-light mb-0 ml-3">
-                  Android
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="text-dark py-5" data-aos="fade-up" data-aos-delay="500" id="projects" style="background-color: rgb(214, 214, 214);backdrop-filter: blur(4px);-webkit-backdrop-filter: blur(4px);" >
-    <div class="section-header text-center display-6 mb-3">
-      <h1 class="text-auto">Projects</h1>
-    </div>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card border-secondary mb-4">
-            <img src="https://www.itrainu.in/wp-content/uploads/2022/01/java-img.jpg" class="card-img-top" alt="blog" />
-            <div class="card-body text-white bg-dark">
-              <h6 class="card-subtitle mb-2 text-muted">
-                Desktop Project in Java
-              </h6>
-              <h5 class="card-title">Gym Management Application</h5>
-              <p class="card-text">
-                Used for to manage the data like maintainance charge,
-                attendy's details,etc
-              </p>
-              <a href="#" class="card-link text-primary">Know More</a>
-              <p class="card-text">
-                <small class="text-muted">Visit to my GitHub Profile</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card border-secondary mb-4">
-            <img src="https://i.pinimg.com/originals/8d/da/53/8dda53ef87ba3fdc4848ec62ab66ea22.png" class="card-img-top"
-              alt="blog" />
-            <div class="card-body text-white bg-dark">
-              <h6 class="card-subtitle mb-2 text-muted">
-                Desktop Project in C
-              </h6>
-              <h5 class="card-title">Student Data Management Application</h5>
-              <p class="card-text">
-                This Application mainly focus on to manage the student
-                records. It provides various Functionalities
-              </p>
-              <a href="#" class="card-link text-primary">Know More</a>
-              <p class="card-text">
-                <small class="text-muted">Visit to my GitHub Profile</small>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card border-secondary mb-4">
-            <img src="https://th.bing.com/th/id/OIP._NVBTVdmjt3Qvq3CZOySXgHaEK?w=319&h=180&c=7&r=0&o=5&pid=1.7"
-              class="card-img-top" alt="blog" />
-            <div class="card-body text-white bg-dark">
-              <h6 class="card-subtitle mb-2 text-muted">
-                Desktop Project in C#
-              </h6>
-              <h5 class="card-title">Computer Shop Billing System</h5>
-              <p class="card-text">
-                Simply Used to manage the stock and billing.
-              </p>
-              <a href="#" class="card-link text-primary">Know More</a>
-              <p class="card-text">
-                <small class="text-muted">Visit to my GitHub Profile</small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="text-dark py-5" data-aos="fade-up" data-aos-delay="500" id="certification" style="background-color: rgba(255, 255, 255, 0)">
-    <div class="section-header text-center display-6 mb-3">
-      <br />
-      <h1 class="text-white text-center">Certifications & Achievements</h1>
-    </div>
-
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-3">
-            <img data-aos="fade-right" class="img-fluid rounded align-left" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg" />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Introduction to Cyber Security
+          <!-- Text Column -->
+          <div class="col-md-6 text-center text-md-left mt-4 mt-md-0">
+            <h1
+              class="mb-3 glowing display-4 display-md-3 display-lg-1"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              Vaibhav Waghmare
             </h1>
-            <h2 class="text-center text-white">
-              By the Cisco Networking Academy
+            <h2
+              class="mb-3 glowing text-center text-md-left h3 h-md-2"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              Full Stack Developer
             </h2>
-            <p class="lead mb-4 text-light text-center">
-              The Introduction to Cyber Security course by Cisco Networking
-              Academy has provided me with a strong foundation in
-              cybersecurity concepts and practices. I am eager to apply these
-              skills to safeguard digital environments and contribute to the
-              field of cybersecurity.<br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-ciscocertification-mitvpu-activity-7247568992859492353-e0EQ?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
+            <!-- CV Button Block -->
+            <div
+              class="d-flex justify-content-center align-items-center flex-wrap"
+            >
+              <div
+                class="rounded-circle p-1"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <a
+                  href="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Vaibhav Waghmare CV.pdf"
+                  download="Vaibhav_Waghmare_CV.pdf"
+                  class="btn gradient-button position-relative text-white"
+                >
+                  Download My Resume / CV
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-3">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Cyber Threat Management
-            </h1>
-            <h2 class="text-center text-white">
-              By the Cisco Networking Academy
-            </h2>
-            <p class="lead mb-4 text-white text-center">
-              The Cyber Threat Management course by Cisco Networking Academy
-              has equipped me with a comprehensive understanding of
-              cybersecurity principles and practices. I am excited to leverage
-              these skills to protect digital assets and contribute to a safer
-              online environment.<br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-continuouslearning-cisconetworkingacademy-activity-7279917386068033536-XJut?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <img data-aos="fade-left" class="img-fluid rounded" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg" />
-          </div>
-        </div>
+
+        <br /><br /><br />
       </div>
     </section>
 
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-3">
-            <img data-aos="fade-right" class="img-fluid rounded align-left" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg" />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Generative AI and LLMs Architecture and Data Preparation
-            </h1>
-            <h2 class="text-center text-white">By IBM on Coursera</h2>
-            <p class="lead mb-4 text-light text-center">
-              The Generative AI and LLMs: Architecture and Data Preparation
-              course by IBM on Coursera has provided me with a solid
-              understanding of generative AI models and data preparation
-              techniques. I am excited to apply these skills to develop and
-              optimize AI applications, contributing to advancements in
-              artificial intelligence. <br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_completion-certificate-for-generative-ai-activity-7261604631359721472-qQ10?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
-          </div>
+    <section
+      class="text-dark text-center py-5"
+      data-aos="fade-up"
+      id="aboutme"
+      data-aos-delay="500"
+      style="
+        background-color: rgb(214, 214, 214);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+      "
+    >
+      <div class="container py-5">
+        <div
+          class="section-header text-center display-6 mb-3"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <br />
+          <h1 class="text-auto">About Me</h1>
         </div>
-      </div>
-    </section>
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-3">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Introduction to Android Mobile Application Development
-            </h1>
-            <h2 class="text-center text-white">By Meta on Coursera</h2>
-            <p class="lead mb-4 text-white text-center">
-              The Introduction to Android Mobile Application Development
-              course by Meta on Coursera has provided me with a solid
-              foundation in Android app development. I have learned to use
-              Android Studio, understand the fundamentals of mobile app
-              development, and create simple Android applications using Java.
-              I am excited to apply these skills to develop innovative mobile
-              applications and contribute to the field of mobile development.
-
-              <br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_androiddevelopment-coursera-lifelonglearning-activity-7266833277125087233-Rjk6?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <img data-aos="fade-left" class="img-fluid rounded" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg" />
-          </div>
+        <div
+          class="col-xl-6 col-lg-9 mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <br /><br />
+          <p class="lead text-auto custom-paragraph">
+            Entry-Level Full Stack Developer | Prompt Engineer | Generative AI
+            Enthusiast | Front-End Developer | Data Analyst
+            <br />------------------------------------------------------------<br />
+            MCA student with hands-on experience building scalable web
+            applications, RESTful APIs, and analytics dashboards using modern
+            technologies like React, Django, Python, and MongoDB. Proficient in
+            data analysis using Python libraries (Pandas, NumPy, Seaborn) and
+            skilled in prompt engineering with GPT-4 and OpenAI APIs. Strong
+            understanding of frontend technologies and experience with cloud
+            computing, machine learning, and cybersecurity. Passionate about
+            applying AI and full-stack development to build innovative,
+            user-centric solutions.
+          </p>
+          <hr class="w-25 my-4" />
+          <h2 class="text-auto font-weight-medium text-uppercase text-sm">
+            Vaibhav Waghmare
+          </h2>
+          <p class="text-auto">Full Stack Developer</p>
+          <br /><br />
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-3">
-            <img data-aos="fade-right" class="img-fluid rounded align-left" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg" />
+    <section class="social-section" style="background: rgb(15, 15, 15)">
+      <h2>Social Media Handles</h2>
+      <div class="social-icons" data-aos="fade-up" data-aos-delay="500">
+        <a
+          href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+          <span class="social-label">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Vaibhaavw" target="_blank">
+          <i class="fab fa-github"></i>
+          <span class="social-label">GitHub</span>
+        </a>
+        <a href="https://t.me/vaibhaavw9527" target="_blank">
+          <i class="fab fa-telegram"></i>
+          <span class="social-label">Telegram</span>
+        </a>
+        <a href="https://www.instagram.com/mr.vaibhaav" target="_blank">
+          <i class="fab fa-instagram"></i>
+          <span class="social-label">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/Vaibhaav Waghmare" target="_blank">
+          <i class="fab fa-facebook"></i>
+          <span class="social-label">Facebook</span>
+        </a>
+      </div>
+    </section>
+
+    <section
+      class="text-dark py-5"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      id="projects"
+      style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px)"
+    >
+      <div
+        class="section-header text-center display-6 mb-3"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <h1 class="text-light">My Projects</h1>
+      </div>
+      <div class="container py-5">
+        <div class="row" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-md-4">
+            <div class="card border-secondary mb-4">
+              <img
+                src="https://www.itrainu.in/wp-content/uploads/2022/01/java-img.jpg"
+                class="card-img-top"
+                alt="blog"
+              />
+              <div class="card-body text-white bg-dark">
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Desktop Project in Java
+                </h6>
+                <h5 class="card-title">Gym Management Application</h5>
+                <p class="card-text">
+                  Used for to manage the data like maintainance charge,
+                  attendy's details,etc
+                </p>
+                <a
+                  href="https://github.com/Vaibhaavw/Gym-Management-System-using-JAVA/blob/87a1ae8c2fb35281313d6640a6e66884c6b97af1/Gym%20Management%20System%20in%20JAVA.rar"
+                  class="card-link text-primary"
+                  >Know More</a
+                >
+                <p class="card-text">
+                  <small class="text-muted">Visit to my GitHub Profile</small>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Introduction to Cloud Computing
-            </h1>
-            <h2 class="text-center text-white">By IBM on Coursera</h2>
-            <p class="lead mb-4 text-light text-center">
-              The Introduction to Cloud Computing course by IBM on Coursera
-              has provided me with a solid foundation in cloud computing
-              concepts and practices. I have learned about cloud service
-              models (IaaS, PaaS, SaaS), deployment models (Public, Private,
-              Hybrid), and emerging technologies supported by cloud computing.
-              I am excited to apply these skills to leverage cloud solutions
-              and contribute to the field of cloud computing.<br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_cloudcomputing-ibm-coursera-activity-7280611159722934272--f7p?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
+          <div class="col-md-4">
+            <div class="card border-secondary mb-4">
+              <img
+                src="https://i.pinimg.com/originals/8d/da/53/8dda53ef87ba3fdc4848ec62ab66ea22.png"
+                class="card-img-top"
+                alt="blog"
+              />
+              <div class="card-body text-white bg-dark">
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Desktop Project in C
+                </h6>
+                <h5 class="card-title">Student Data Management Application</h5>
+                <p class="card-text">
+                  This Application mainly focus on to manage the student
+                  records. It provides various Functionalities
+                </p>
+                <a
+                  href="https://github.com/Vaibhaavw/SRMS-Project-in-C/blob/c426ae3ad1d041847f088e78dc282174d617e5fc/Student%20Record%20MGM%20System%20in%20C.rar"
+                  class="card-link text-primary"
+                  >Know More</a
+                >
+                <p class="card-text">
+                  <small class="text-muted">Visit to my GitHub Profile</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-secondary mb-4">
+              <img
+                src="https://th.bing.com/th/id/OIP._NVBTVdmjt3Qvq3CZOySXgHaEK?w=319&h=180&c=7&r=0&o=5&pid=1.7"
+                class="card-img-top"
+                alt="blog"
+              />
+              <div class="card-body text-white bg-dark">
+                <h6 class="card-subtitle mb-2 text-muted">
+                  Desktop Project in C#
+                </h6>
+                <h5 class="card-title">Computer Shop Billing System</h5>
+                <p class="card-text">
+                  Simply Used to manage the stock and billing.
+                </p>
+                <a
+                  href="https://github.com/Vaibhaavw/Computer-Shop-Billing-System-in-C-/blob/343357fdf7b3b4ed1f01b1cb35172aae70c76c6a/Computer%20Shop%20Billing%20System.rar"
+                  class="card-link text-primary"
+                  >Know More</a
+                >
+                <p class="card-text">
+                  <small class="text-muted">Visit to my GitHub Profile</small>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-3">
-            <h1 class="display-4 mb-4 text-white text-center">
-              What is Social
-            </h1>
-            <h2 class="text-center text-white">
-              By Northwestern University and offered through Coursera
-            </h2>
-            <p class="lead mb-4 text-white text-center">
-              The "What is Social?" course by Northwestern University on
-              Coursera has taught me to develop effective social media
-              strategies and analyze metrics. I'm excited to apply these
-              skills to enhance my social media presence and contribute to
-              digital marketing.
-
-              <br /><br /><a
-                href="https://www.linkedin.com/posts/waghmare-vaibhaav_whatissocial-coursera-northwesternuniversity-activity-7266835436948398080-qSGb?utm_source=share&utm_medium=member_desktop"
-                class="btn btn-primary">Know More</a>
-            </p>
+    <section
+      class="text-dark py-5"
+      data-aos="fade-up"
+      id="Language"
+      data-aos-delay="500"
+      style="
+        background-color: rgb(214, 214, 214);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0);
+      "
+    >
+      <div
+        class="section-header text-center display-6 mb-3"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <br />
+        <h1 class="text-auto">Programming Work-Space</h1>
+      </div>
+      <div class="container py-5">
+        <div class="row" data-aos="fade-up" data-aos-delay="500">
+          <!-- Bootstrap Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://getbootstrap.com/docs/5.1/assets/img/bootstrap-icons.png"
+                      alt="Bootstrap"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Bootstrap
+                  </h2>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <img data-aos="fade-left" class="img-fluid rounded" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg" />
+
+          <!-- HTML Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://icones.pro/wp-content/uploads/2021/05/icone-html-bleue.png"
+                      alt="HTML"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    HTML
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+                      alt="CSS"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    CSS
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Python Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://th.bing.com/th/id/OIP._1rRK1kdLzTITw_KQkT8YQAAAA?rs=1&pid=ImgDetMain"
+                      alt="Python"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Python
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Java Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://www.itrainu.in/wp-content/uploads/2022/01/java-img.jpg"
+                      alt="Java"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Java
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- C Language Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://www.kindpng.com/picc/m/403-4039227_c-language-logo-png-transparent-png.png"
+                      alt="C Language"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    C Language
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- JavaScript Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                      alt="JavaScript"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    JavaScript
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ReactJS Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                      alt="ReactJS"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    ReactJS
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Node.js Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://tse1.mm.bing.net/th/id/OIP.2uFooAQy1Qm5AJve8A7cuwHaIO?rs=1&pid=ImgDetMain&o=7&rm=3"
+                      alt="Node.js"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Node.js
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Express.js Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://th.bing.com/th/id/OIP.ANtKNynnw_CGu-E9kIrqcAAAAA?rs=1&pid=ImgDetMain"
+                      alt="Express.js"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Express.js
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Django Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://image.pngaaa.com/344/1947344-middle.png"
+                      alt="Django"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Django
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MongoDB Card -->
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://technologypoint.in/wp-content/uploads/2021/06/MongoDB-sm-logo.gif"
+                      alt="MongoDB"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    MongoDB
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://c8.alamy.com/comp/F48AY6/blue-sql-icon-F48AY6.jpg"
+                      alt="SQL"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    SQL
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <div class="card border-1px shadow">
+              <div class="card-body text-center">
+                <div
+                  class="d-flex align-items-center justify-content-center my-3"
+                >
+                  <div class="progress-circle">
+                    <img
+                      src="https://img.favpng.com/17/15/11/android-software-development-mobile-app-development-icon-png-favpng-Nav7vD1NPTP5meFUJDEhCeGvt.jpg"
+                      alt="Android"
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <h2 class="card-title text-uppercase text-light mb-0 ml-3">
+                    Android
+                  </h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-3">
-            <img data-aos="fade-right" class="img-fluid rounded align-left" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg" />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-4 mb-4 text-white text-center">
-              NDG Linux Unhatched course
-            </h1>
-            <h2 class="text-center text-white">
-              By the Cisco Networking Academy
-            </h2>
-            <p class="lead mb-4 text-light text-center">
-              The course has provided me with a solid foundation in Linux,
-              enhancing my understanding of the operating system and its
-              applications. I am eager to apply these skills in real-world
-              scenarios and contribute to the open-source community.<br /><br /><a href="https://www.netacad.com"
-                class="btn btn-primary">Know More</a>
-            </p>
+    <section
+      class="text-dark py-5"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      id="certification"
+      style="background-color: rgba(255, 255, 255, 0)"
+    >
+      <div
+        class="section-header text-center display-6 mb-3"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <br />
+        <h1 class="text-white text-center">Certifications & Achievements</h1>
+      </div>
+
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mb-3">
+              <img
+                data-aos="fade-right"
+                class="img-fluid rounded align-left"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Introduction to Cyber Security
+              </h1>
+              <h2 class="text-center text-white">
+                By the Cisco Networking Academy
+              </h2>
+              <p class="lead mb-4 text-light text-center">
+                The Introduction to Cyber Security course by Cisco Networking
+                Academy has provided me with a strong foundation in
+                cybersecurity concepts and practices. I am eager to apply these
+                skills to safeguard digital environments and contribute to the
+                field of cybersecurity.<br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-ciscocertification-mitvpu-activity-7247568992859492353-e0EQ?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 mb-3">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Cyber Threat Management
+              </h1>
+              <h2 class="text-center text-white">
+                By the Cisco Networking Academy
+              </h2>
+              <p class="lead mb-4 text-white text-center">
+                The Cyber Threat Management course by Cisco Networking Academy
+                has equipped me with a comprehensive understanding of
+                cybersecurity principles and practices. I am excited to leverage
+                these skills to protect digital assets and contribute to a safer
+                online environment.<br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-continuouslearning-cisconetworkingacademy-activity-7279917386068033536-XJut?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img
+                data-aos="fade-left"
+                class="img-fluid rounded"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mb-3">
+              <img
+                data-aos="fade-right"
+                class="img-fluid rounded align-left"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Generative AI and LLMs Architecture and Data Preparation
+              </h1>
+              <h2 class="text-center text-white">By IBM on Coursera</h2>
+              <p class="lead mb-4 text-light text-center">
+                The Generative AI and LLMs: Architecture and Data Preparation
+                course by IBM on Coursera has provided me with a solid
+                understanding of generative AI models and data preparation
+                techniques. I am excited to apply these skills to develop and
+                optimize AI applications, contributing to advancements in
+                artificial intelligence. <br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_completion-certificate-for-generative-ai-activity-7261604631359721472-qQ10?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 mb-3">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Introduction to Android Mobile Application Development
+              </h1>
+              <h2 class="text-center text-white">By Meta on Coursera</h2>
+              <p class="lead mb-4 text-white text-center">
+                The Introduction to Android Mobile Application Development
+                course by Meta on Coursera has provided me with a solid
+                foundation in Android app development. I have learned to use
+                Android Studio, understand the fundamentals of mobile app
+                development, and create simple Android applications using Java.
+                I am excited to apply these skills to develop innovative mobile
+                applications and contribute to the field of mobile development.
+
+                <br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_androiddevelopment-coursera-lifelonglearning-activity-7266833277125087233-Rjk6?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img
+                data-aos="fade-left"
+                class="img-fluid rounded"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mb-3">
+              <img
+                data-aos="fade-right"
+                class="img-fluid rounded align-left"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Introduction to Cloud Computing
+              </h1>
+              <h2 class="text-center text-white">By IBM on Coursera</h2>
+              <p class="lead mb-4 text-light text-center">
+                The Introduction to Cloud Computing course by IBM on Coursera
+                has provided me with a solid foundation in cloud computing
+                concepts and practices. I have learned about cloud service
+                models (IaaS, PaaS, SaaS), deployment models (Public, Private,
+                Hybrid), and emerging technologies supported by cloud computing.
+                I am excited to apply these skills to leverage cloud solutions
+                and contribute to the field of cloud computing.<br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cloudcomputing-ibm-coursera-activity-7280611159722934272--f7p?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 mb-3">
+              <h1 class="display-4 mb-4 text-white text-center">
+                What is Social
+              </h1>
+              <h2 class="text-center text-white">
+                By Northwestern University and offered through Coursera
+              </h2>
+              <p class="lead mb-4 text-white text-center">
+                The "What is Social?" course by Northwestern University on
+                Coursera has taught me to develop effective social media
+                strategies and analyze metrics. I'm excited to apply these
+                skills to enhance my social media presence and contribute to
+                digital marketing.
+
+                <br /><br /><a
+                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_whatissocial-coursera-northwesternuniversity-activity-7266835436948398080-qSGb?utm_source=share&utm_medium=member_desktop"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img
+                data-aos="fade-left"
+                class="img-fluid rounded"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mb-3">
+              <img
+                data-aos="fade-right"
+                class="img-fluid rounded align-left"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-4 mb-4 text-white text-center">
+                NDG Linux Unhatched course
+              </h1>
+              <h2 class="text-center text-white">
+                By the Cisco Networking Academy
+              </h2>
+              <p class="lead mb-4 text-light text-center">
+                The course has provided me with a solid foundation in Linux,
+                enhancing my understanding of the operating system and its
+                applications. I am eager to apply these skills in real-world
+                scenarios and contribute to the open-source community.<br /><br /><a
+                  href="https://www.netacad.com"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 mb-3">
+              <h1 class="display-4 mb-4 text-white text-center">
+                NDG Linux Essential course
+              </h1>
+              <h2 class="text-center text-white">
+                By the Cisco Networking Academy
+              </h2>
+              <p class="lead mb-4 text-white text-center">
+                The course has provided me with a solid foundation in Linux,
+                enhancing my understanding of the operating system and its
+                applications. I am eager to apply these skills in real-world
+                scenarios and contribute to the open-source community.<br /><br /><a
+                  href="https://www.netacad.com"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img
+                data-aos="fade-left"
+                class="img-fluid rounded"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 mb-3">
+              <img
+                data-aos="fade-right"
+                class="img-fluid rounded align-left"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg"
+              />
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Problem Solving Using Computational Thinking
+              </h1>
+              <p class="lead mb-4 text-light text-center">
+                Computational Thinking: I honed my ability to break down complex
+                problems into smaller, manageable components. Computer
+                Programming: I gained practical skills in coding and algorithmic
+                thinking. Critical Thinking: I learned to analyse problems
+                logically and devise efficient solutions.<br /><br /><a
+                  href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/computational-thinking-problem-solving"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container py-5 d-flex align-items-center">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 mb-3">
+              <h1 class="display-4 mb-4 text-white text-center">
+                Practical Python for AI Coding 1
+              </h1>
+              <p class="lead mb-4 text-light text-center">
+                I delved into Python syntax, functions, and libraries commonly
+                used in AI coding. Mastered NumPy, Pandas, and TensorFlow for
+                efficient data handling, built an AI coding environment and
+                explored Scikit-learn, TensorFlow, and Keras.<br /><br /><a
+                  href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/practical-python-for-ai-coding--preparation-for-coding"
+                  class="btn btn-primary"
+                  >Know More</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <img
+                data-aos="fade-left"
+                class="img-fluid rounded"
+                alt="hero"
+                src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp2.jpeg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-3">
-            <h1 class="display-4 mb-4 text-white text-center">
-              NDG Linux Essential course
-            </h1>
-            <h2 class="text-center text-white">
-              By the Cisco Networking Academy
-            </h2>
-            <p class="lead mb-4 text-white text-center">
-              The course has provided me with a solid foundation in Linux,
-              enhancing my understanding of the operating system and its
-              applications. I am eager to apply these skills in real-world
-              scenarios and contribute to the open-source community.<br /><br /><a href="https://www.netacad.com"
-                class="btn btn-primary">Know More</a>
-            </p>
+
+    <footer class="footer" data-aos="fade-up" data-aos-delay="300">
+      <div class="container">
+        <div class="row">
+          <!-- About Section -->
+          <div class="col-md-4">
+            <h4 class="section-title">About</h4>
+            <p>Vaibhav Waghmare</p>
+            <p>Full Stack Developer</p>
+            <p>Addr: Solapur, Maharashtra, India</p>
+            <p><i class="fas fa-envelope"></i> vaibhaavw@gmail.com</p>
           </div>
-          <div class="col-lg-4">
-            <img data-aos="fade-left" class="img-fluid rounded" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg" />
+
+          <!-- Social Media Handles with Larger Icons and Names -->
+          <div class="col-md-4">
+            <h4 class="section-title">Social Media</h4>
+            <ul class="list-unstyled social-media-list">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/"
+                  ><i class="fab fa-linkedin"></i>_LinkedIn</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/Vaibhaavw"
+                  ><i class="fab fa-github"></i>_GitHub</a
+                >
+              </li>
+              <li>
+                <a href="https://www.facebook.com/Vaibhaav Waghmare"
+                  ><i class="fab fa-facebook"></i>_Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://t.me/vaibhaavw9527"
+                  ><i class="fab fa-telegram"></i>_Telegram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/mr.vaibhaav"
+                  ><i class="fab fa-instagram"></i>_Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Connect with Me Section -->
+          <div class="col-md-4">
+            <h4 class="section-title">Connect with me</h4>
+            <form id="contactForm">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <input type="submit" value="Connect" />
+            </form>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-4 mb-3">
-            <img data-aos="fade-right" class="img-fluid rounded align-left" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg" />
-          </div>
-          <div class="col-lg-6">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Problem Solving Using Computational Thinking
-            </h1>
-            <p class="lead mb-4 text-light text-center">
-              Computational Thinking: I honed my ability to break down complex
-              problems into smaller, manageable components. Computer
-              Programming: I gained practical skills in coding and algorithmic
-              thinking. Critical Thinking: I learned to analyse problems
-              logically and devise efficient solutions.<br /><br /><a
-                href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/computational-thinking-problem-solving"
-                class="btn btn-primary">Know More</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container py-5 d-flex align-items-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 mb-3">
-            <h1 class="display-4 mb-4 text-white text-center">
-              Practical Python for AI Coding 1
-            </h1>
-            <p class="lead mb-4 text-light text-center">
-              I delved into Python syntax, functions, and libraries commonly
-              used in AI coding. Mastered NumPy, Pandas, and TensorFlow for
-              efficient data handling, built an AI coding environment and
-              explored Scikit-learn, TensorFlow, and Keras.<br /><br /><a
-                href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/practical-python-for-ai-coding--preparation-for-coding"
-                class="btn btn-primary">Know More</a>
-            </p>
-          </div>
-          <div class="col-lg-4">
-            <img data-aos="fade-left" class="img-fluid rounded" alt="hero"
-              src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp2.jpeg" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </section>
+    </footer>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <!-- About Section -->
-        <div class="col-md-4">
-          <h4 class="section-title">About</h4>
-          <p>Vaibhav Waghmare</p>
-          <p>Full Stack Developer</p>
-          <p>Addr: Solapur, Maharashtra, India</p>
-          <p><i class="fas fa-envelope"></i> vaibhaavw@gmail.com</p>
-        </div>
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Social Media Handles with Larger Icons and Names -->
-        <div class="col-md-4">
-          <h4 class="section-title">Social Media</h4>
-          <ul class="list-unstyled social-media-list">
-            <li>
-              <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/"><i
-                  class="fab fa-linkedin"></i>_LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://github.com/Vaibhaavw"><i class="fab fa-github"></i>_GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/Vaibhaav Waghmare"><i class="fab fa-facebook"></i>_Facebook</a>
-            </li>
-            <li>
-              <a href="https://t.me/vaibhaavw9527"><i class="fab fa-telegram"></i>_Telegram</a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/mr.vaibhaav"><i class="fab fa-instagram"></i>_Instagram</a>
-            </li>
-          </ul>
-        </div>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          alert(`Thank you ${name}, we've received your email: ${email}`);
+        });
+      AOS.init({ duration: 1000 });
 
-        <!-- Connect with Me Section -->
-        <div class="col-md-4">
-          <h4 class="section-title">Connect with me</h4>
-          <form id="contactForm">
-            <input type="text" id="name" name="name" placeholder="Name" required />
-            <input type="email" id="email" name="email" placeholder="Email" required />
-            <input type="submit" value="Connect" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Font Awesome for icons -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    document
-      .getElementById("contactForm")
-      .addEventListener("submit", function (e) {
-        e.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        alert(`Thank you ${name}, we've received your email: ${email}`);
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
       });
-  </script>
 
-
-<script>
-  AOS.init({ duration: 1000 });
-
-  VanillaTilt.init(document.querySelectorAll(".card"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.5,
-  });
-
-  // Apply VANTA.HALO to the #home section
-  VANTA.HALO({
-    el: "#home", // Replace with your actual element ID
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    backgroundColor: 0x00,
-    amplitudeFactor: 3.00,
-    size: 2.00,
-  });
-</script>
-
-
-
-
-
-</body>
-
+      // Apply VANTA.HALO to the #home section
+      VANTA.HALO({
+        el: "#home", // Replace with your actual element ID
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        backgroundColor: 0x00,
+        amplitudeFactor: 3.0,
+        size: 2.0,
+      });
+    </script>
+  </body>
 </html>
-
