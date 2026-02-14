@@ -57,6 +57,11 @@
             border: 5px solid rgba(0, 238, 255, 0.2);
             box-shadow: 0 0 30px rgba(0, 238, 255, 0.1);
             transition: transform 0.5s ease;
+            width: 100%; max-width: 420px; /* limits size on large screens */ 
+            height: auto; /* keeps aspect ratio */ 
+            aspect-ratio: 1 / 1; /* ensures square shape */ 
+            border-radius: 50%; /* makes it a circle */ 
+            object-fit: cover; /* crops nicely */
         }
 
         .profile-img:hover {
@@ -309,14 +314,14 @@
     <section id="home">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-5 text-center" data-aos="fade-right">
+                <div class="col-md-5 mt-5 pt-3 text-center" data-aos="fade-right">
                     <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/v.jpg" alt="Vaibhav" class="img-fluid rounded-circle profile-img mx-auto" style="width: 420px; height: 420px; object-fit: cover;">
                 </div>
                 <div class="col-md-7 mt-5 mt-md-0" data-aos="fade-left">
                     <h5 class="h3 text-secondary mb-4">Hello, I am</h5>
                     <h1 class="display-3 font-bold mb-3 glowing-text">Vaibhav Waghmare</h1>
                     <h2 class="h4 text-primary mb-4">Building user-centric solutions with AI & Full-Stack Tech</h2>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 mb-2">
                         
                         <a href="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Vaibhav Waghmare CV.pdf" class="btn gradient-button position-relative text-white">Download CV</a>
                     </div>
