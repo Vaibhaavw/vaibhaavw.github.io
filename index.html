@@ -5,9 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vaibhav Waghmare | Full Stack Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <meta name="description"
@@ -32,19 +33,98 @@
         body {
             background-color: var(--primary-bg);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
+            letter-spacing: -0.01em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .navbar-brand,
+        .btn-main,
+        .gradient-button {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.03em;
+        }
+
+        .experience-date,
+        .skill-badge,
+        .timeline-marker,
+        .small,
+        .text-sm,
+        code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* --- Custom Utilities (Replacing Tailwind) --- */
+        .fw-bold {
+            font-weight: 700 !important;
+        }
+
+        .fw-semibold {
+            font-weight: 600 !important;
+        }
+
+        .text-gray-400 {
+            color: #94a3b8 !important;
+        }
+
+        .text-gray-500 {
+            color: #64748b !important;
+        }
+
+        .text-gray-600 {
+            color: #475569 !important;
+        }
+
+        .tracking-tighter {
+            letter-spacing: -0.05em;
         }
 
         /* --- Navigation --- */
         header {
-            background: rgba(5, 4, 35, 0.723) !important;
+            background: rgba(5, 4, 35, 0.8) !important;
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+            border-color: var(--accent-blue);
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: rgba(5, 4, 35, 0.95);
+                margin-top: 1rem;
+                padding: 1rem;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-link-custom {
+                padding: 0.8rem 0;
+                display: block;
+            }
         }
 
 
         .nav-link-custom {
+            font-family: 'Space Grotesk', sans-serif;
             color: #ccc;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -242,8 +322,12 @@
         }
 
         .gradient-button:hover {
+            background: linear-gradient(45deg, #00eeff, #bc26ff);
+            box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
+            transform: scale(1.05);
             padding-left: calc(2.5rem + 5px);
             padding-right: calc(2.5rem + 10px);
+            color: white;
         }
 
         /* Achievement Image Hover Effect */
@@ -329,20 +413,39 @@
 
 <body>
     <header class="fixed-top py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="text-white font-bold text-xl tracking-tighter">VW<span
-                    style="color:var(--accent-blue)">.</span></a>
-            <nav class="d-none d-md-flex">
-                <a class="mx-3 nav-link-custom" href="#home">Home</a>
-                <a class="mx-3 nav-link-custom" href="#aboutme">About</a>
-                <a class="mx-3 nav-link-custom" href="#experience">Experience</a>
-                <a class="mx-3 nav-link-custom" href="#Language">Skills</a>
-                <a class="mx-3 nav-link-custom" href="#projects">Projects</a>
-                <a class="mx-3 nav-link-custom" href="#certification">Certifications</a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <div class="container-fluid p-0">
+                    <a href="#" class="navbar-brand fw-bold fs-3 tracking-tighter text-white">VW<span
+                            style="color:var(--accent-blue)">.</span></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto align-items-lg-center">
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2" href="#aboutme">About</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2"
+                                    href="#experience">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2" href="#Language">Skills</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2"
+                                    href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2"
+                                    href="#client-work">Clients</a></li>
+                            <li class="nav-item"><a class="nav-link nav-link-custom mx-lg-2"
+                                    href="#certification">Certifications</a></li>
+                            <li class="nav-item mt-3 mt-lg-0 ms-lg-3">
+                                <a href="#connect" class="btn btn-main w-100 w-lg-auto">Hire Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-            <a href="#connect" class="btn btn-main">
-                Hire Me
-            </a>
         </div>
     </header>
 
@@ -356,7 +459,7 @@
                 </div>
                 <div class="col-md-7 mt-5 mt-md-0" data-aos="fade-left">
                     <h5 class="h3 text-secondary mb-4">Hello, I am</h5>
-                    <h1 class="display-3 font-bold mb-3 glowing-text">Vaibhav Waghmare</h1>
+                    <h1 class="display-3 fw-bold mb-3 glowing-text">Vaibhav Waghmare</h1>
                     <h2 class="h4 text-primary mb-4">Building the Future of the Web with AI & Full-Stack Innovation.
                     </h2>
                     <div class="d-flex gap-3 mb-2">
@@ -373,35 +476,41 @@
         <div class="container py-5">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8" data-aos="fade-up">
-                    <h2 class="display-5 font-bold mb-4">About Me</h2>
-                    <p class="lead text-gray-400 mb-4" style="line-height: 1.8;">
-                        <strong>Ai Full Stack Developer | Generative AI Engineer | Prompt Engineering | Front-End
-                            Developer | Data Analyst </strong>
-                        <br />------------------------------------------------------------<br />
-                        I am an AI-Augmented Full-Stack Developer and MCA student dedicated to building intelligent,
-                        user-centric digital experiences at the intersection of robust engineering and Generative AI.
-                        Expert in the Full Stack Development, I specialize in architecting scalable applications
-                        enhanced by advanced Prompt Engineering and OpenAI API integrations to automate complex
-                        workflows. Beyond development, I leverage Data Analytics to transform raw data into actionable
-                        insights and operational efficiency. Whether I am designing high-performance backends or
-                        fine-tuning sophisticated AI models, my mission is to bridge the gap between technical
-                        complexity and intuitive, high-impact design.
-                    </p><br />------------------------------------------------------------<br />
-                    <h2 class="text-auto font-weight-medium text-uppercase text-sm">
-                        Vaibhav Waghmare
-                    </h2>
-                    <div class="row text-left mt-5">
+                    <h2 class="display-5 fw-bold mb-4">About Me</h2>
+                    <div class="glass-card p-4 mb-4">
+                        <p class="lead text-gray-400 mb-0" style="line-height: 1.8;">
+                            <span class="text-info fw-bold">Ai Full Stack Developer | Generative AI Engineer | Prompt
+                                Engineering | Front-End Developer | Data Analyst</span>
+                        </p>
+                        <hr class="my-4 border-info opacity-25">
+                        <p class="text-gray-400" style="line-height: 1.8;">
+                            I am an AI-Augmented Full-Stack Developer and MCA student dedicated to building intelligent,
+                            user-centric digital experiences at the intersection of robust engineering and Generative
+                            AI.
+                            Expert in Full Stack Development, I specialize in architecting scalable applications
+                            enhanced by advanced Prompt Engineering and OpenAI API integrations to automate complex
+                            workflows.
+                        </p>
+                        <p class="text-gray-400 mb-0" style="line-height: 1.8;">
+                            Beyond development, I leverage Data Analytics to transform raw data into actionable
+                            insights and operational efficiency. Whether I am designing high-performance backends or
+                            fine-tuning sophisticated AI models, my mission is to bridge the gap between technical
+                            complexity and intuitive, high-impact design.
+                        </p>
+                    </div>
+
+                    <div class="row text-start mt-5">
                         <div class="col-md-4 mb-3">
-                            <h6 class="text-info">Location</h6>
+                            <h6 class="text-info fw-bold text-uppercase small">Location</h6>
                             <p>Solapur, Maharashtra, India</p>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <h6 class="text-info">Education</h6>
+                            <h6 class="text-info fw-bold text-uppercase small">Education</h6>
                             <p>Master of Computer Applications</p>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <h6 class="text-info">Specialty</h6>
-                            <p>Full Stack & Prompt Engineering</p>
+                            <h6 class="text-info fw-bold text-uppercase small">Specialty</h6>
+                            <p>Full Stack & AI Agents</p>
                         </div>
                     </div>
                 </div>
@@ -549,130 +658,171 @@
         </div>
     </section>
 
-    <section id="Language" class="py-5" style="background: linear-gradient(45deg,#00eeffb3,#ba26ffbb);">
+    <section id="Language" class="py-5" style="background: linear-gradient(135deg, #050423 0%, #0f0f0f 100%);">
         <div class="container py-5">
-            <h2 class="text-center display-5 font-bold mb-5">Technical Toolkit</h2>
-            <div class="row g-3">
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-caret-up fa-2x text-light mb-2"></i>
-                        <p class="m-0 font-bold">Vercel</p>
-                    </div>
-                </div>
+            <h2 class="text-center display-5 fw-bold mb-5">Technical Toolkit</h2>
 
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-heart fa-2x text-danger mb-2"></i>
-                        <p class="m-0 font-bold">Lovable</p>
+            <!-- AI & Gen-AI Section -->
+            <div class="mb-5">
+                <h4 class="text-info fw-bold mb-4 px-3 border-start border-3 border-info">Generative AI & Engineering
+                </h4>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-robot fa-2x text-success mb-2"></i>
+                            <p class="m-0 fw-bold small">Generative AI</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-code fa-2x text-warning mb-2"></i>
-                        <p class="m-0 font-bold">Replit</p>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-user-gear fa-2x text-info mb-2"></i>
+                            <p class="m-0 fw-bold small">AI Agents</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-rocket fa-2x text-primary mb-2"></i>
-                        <p class="m-0 font-bold">Antigravity</p>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-terminal fa-2x text-warning mb-2"></i>
+                            <p class="m-0 fw-bold small">Prompt Eng.</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-user-gear fa-2x text-success mb-2"></i>
-                        <p class="m-0 font-bold">AI Agents</p>
-                    </div>
-                </div>
-
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="800">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-bolt fa-2x text-teal mb-2" style="color: #05998b;"></i>
-                        <p class="m-0 font-bold">FastAPI</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-3  pt-4">
-                <div class="col-6 col-md-3 col-lg-2 " data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-robot fa-2x text-success mb-2"></i>
-                        <p class="m-0 font-bold">Generative AI</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-react fa-2x text-info mb-2"></i>
-                        <p class="m-0 font-bold">ReactJS</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-envira fa-2x mb-2" style="color: #47A248;"></i>
-                        <p class="m-0 font-bold">MongoDB</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-python fa-2x text-warning mb-2"></i>
-                        <p class="m-0 font-bold">Python</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-database fa-2x text-primary mb-2"></i>
-                        <p class="m-0 font-bold">SQL</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-bootstrap fa-2x text-purple-500 mb-2"></i>
-                        <p class="m-0 font-bold">Bootstrap</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-3 pt-4">
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="700">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-terminal fa-2x text-secondary mb-2"></i>
-                        <p class="m-0 font-bold">Prompts</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
-                        <p class="m-0 font-bold">Power BI</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fas fa-file-lines fa-2x text-purple-500 mb-2"></i>
-                        <p class="m-0 font-bold">Microsoft Office</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-html5 fa-2x text-info mb-2"></i>
-                        <p class="m-0 font-bold">HTML</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-css3-alt fa-2x text-success mb-2"></i>
-                        <p class="m-0 font-bold">CSS</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-                        <i class="fab fa-python fa-2x text-warning mb-2"></i>
-                        <p class="m-0 font-bold">Django</p>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-bolt fa-2x text-primary mb-2"></i>
+                            <p class="m-0 fw-bold small">LLM APIs</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Core Languages Section -->
+            <div class="mb-5">
+                <h4 class="text-info fw-bold mb-4 px-3 border-start border-3 border-info">Core Programming Languages
+                </h4>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-python fa-2x text-warning mb-2"></i>
+                            <p class="m-0 fw-bold small">Python</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-js fa-2x text-warning mb-2"></i>
+                            <p class="m-0 fw-bold small">JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-database fa-2x text-info mb-2"></i>
+                            <p class="m-0 fw-bold small">SQL</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-html5 fa-2x text-danger mb-2" style="color: #e34f26;"></i>
+                            <p class="m-0 fw-bold small">HTML5</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-css3-alt fa-2x text-primary mb-2"></i>
+                            <p class="m-0 fw-bold small">CSS3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Frameworks & Databases Section -->
+            <div class="mb-5">
+                <h4 class="text-info fw-bold mb-4 px-3 border-start border-3 border-info">Frameworks & Databases</h4>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-react fa-2x text-info mb-2"></i>
+                            <p class="m-0 fw-bold small">ReactJS</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-python fa-2x text-warning mb-2"></i>
+                            <p class="m-0 fw-bold small">Django</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-fire fa-2x text-danger mb-2"></i>
+                            <p class="m-0 fw-bold small">FastAPI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-envira fa-2x text-success mb-2"></i>
+                            <p class="m-0 fw-bold small">MongoDB</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-bootstrap fa-2x text-purple-500 mb-2"></i>
+                            <p class="m-0 fw-bold small">Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity & Dev Tools Section -->
+            <div>
+                <h4 class="text-info fw-bold mb-4 px-3 border-start border-3 border-info">Productivity & Dev Tools</h4>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-caret-up fa-2x text-light mb-2"></i>
+                            <p class="m-0 fw-bold small">Vercel</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-rocket fa-2x text-primary mb-2"></i>
+                            <p class="m-0 fw-bold small">Antigravity</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
+                            <p class="m-0 fw-bold small">Power BI</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fab fa-github fa-2x text-white mb-2"></i>
+                            <p class="m-0 fw-bold small">GitHub</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-heart fa-2x text-danger mb-2"></i>
+                            <p class="m-0 fw-bold small">Lovable</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-terminal fa-2x text-info mb-2"></i>
+                            <p class="m-0 fw-bold small">Replit</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-cloud fa-2x text-info mb-2"></i>
+                            <p class="m-0 fw-bold small">MS 365</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="700">
+                        <div class="glass-card p-3 text-center">
+                            <i class="fas fa-file-excel fa-2x text-success mb-2"></i>
+                            <p class="m-0 fw-bold small">Excel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -822,7 +972,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/PowerBI.jpeg"
-                                alt="Achievement 0">
+                                alt="Power BI for Beginners Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Power BI for Beginners</h5>
@@ -838,7 +988,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg"
-                                alt="Achievement 1">
+                                alt="Introduction to Cyber Security Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Introduction to Cyber Security</h5>
@@ -853,7 +1003,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg"
-                                alt="Achievement 2">
+                                alt="Cyber Threat Management Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Cyber Threat Management</h5>
@@ -868,7 +1018,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg"
-                                alt="Achievement 3">
+                                alt="Android Mobile App Development Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Introduction to Android Mobile Application Development</h5>
@@ -883,7 +1033,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg"
-                                alt="Achievement 4">
+                                alt="Generative AI and LLMs Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Generative AI and LLMs Architecture and Data Preparation</h5>
@@ -900,7 +1050,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg"
-                                alt="Achievement 5">
+                                alt="Introduction to Cloud Computing Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Introduction to Cloud Computing</h5>
@@ -915,7 +1065,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg"
-                                alt="Achievement 6">
+                                alt="What is Social Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">What is Social</h5>
@@ -931,7 +1081,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg"
-                                alt="Achievement 7">
+                                alt="NDG Linux Unhatched Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">NDG Linux Unhatched course</h5>
@@ -945,7 +1095,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg"
-                                alt="Achievement 8">
+                                alt="NDG Linux Essential Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">NDG Linux Essential course</h5>
@@ -959,7 +1109,7 @@
                     <div class="glass-card h-100 p-3">
                         <div class="achievement-img-container">
                             <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg"
-                                alt="Achievement 9">
+                                alt="Computational Thinking Certification">
                         </div>
                         <div class="mt-3">
                             <h5 class="font-bold">Problem Solving Using Computational Thinking</h5>
@@ -995,23 +1145,23 @@
         <div class="social-icons" data-aos="fade-up" data-aos-delay="500">
             <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/" target="_blank">
                 <i class="fab fa-linkedin"></i>
-                <span class="social-label">LinkedIn</span>
+
             </a>
             <a href="https://github.com/Vaibhaavw" target="_blank">
                 <i class="fab fa-github"></i>
-                <span class="social-label">GitHub</span>
+
             </a>
             <a href="https://t.me/vaibhaavw9527" target="_blank">
                 <i class="fab fa-telegram"></i>
-                <span class="social-label">Telegram</span>
+
             </a>
             <a href="https://www.instagram.com/mr.vaibhaav" target="_blank">
                 <i class="fab fa-instagram"></i>
-                <span class="social-label">Instagram</span>
+
             </a>
             <a href="https://www.facebook.com/Vaibhaav Waghmare" target="_blank">
                 <i class="fab fa-facebook"></i>
-                <span class="social-label">Facebook</span>
+
             </a>
         </div>
     </section>
@@ -1075,8 +1225,10 @@
     <hr class="my-5 border-secondary opacity-25">
     <p class="text-center text-gray-600 text-sm">© 2026 Vaibhav Waghmare.</p>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 
