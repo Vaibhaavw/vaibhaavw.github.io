@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +10,15 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <meta name="description" content="Vaibhav Waghmare - Full Stack Developer & Generative AI Engineer specializing in React, Django, Python, and AI-powered applications.">
-<meta name="keywords" content="Vaibhav Waghmare, Full Stack Developer, React Developer, Django Developer, Generative AI, Python Developer, Portfolio">
-<meta name="author" content="Vaibhav Waghmare">
-<link rel="icon" type="image/png" href="favicon.png">
-<meta property="og:title" content="Vaibhav Waghmare | Full Stack Developer">
-<meta property="og:description" content="Building AI-powered and scalable full-stack applications.">
-<meta property="og:type" content="website">
+    <meta name="description"
+        content="Vaibhav Waghmare - Full Stack Developer & Generative AI Engineer specializing in React, Django, Python, and AI-powered applications.">
+    <meta name="keywords"
+        content="Vaibhav Waghmare, Full Stack Developer, React Developer, Django Developer, Generative AI, Python Developer, Portfolio">
+    <meta name="author" content="Vaibhav Waghmare">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="Vaibhav Waghmare | Full Stack Developer">
+    <meta property="og:description" content="Building AI-powered and scalable full-stack applications.">
+    <meta property="og:type" content="website">
 
 
     <style>
@@ -39,7 +42,7 @@
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
 
         .nav-link-custom {
             color: #ccc;
@@ -51,8 +54,8 @@
         .nav-link-custom:hover {
             color: var(--accent-blue);
             font-size: 1.15em;
-        text-shadow: 0 0 10px #87ceeb, 0 0 20px #87ceeb, 0 0 30px #87ceeb,
-          0 0 40px #87ceeb;
+            text-shadow: 0 0 10px #87ceeb, 0 0 20px #87ceeb, 0 0 30px #87ceeb,
+                0 0 40px #87ceeb;
         }
 
         /* --- Hero Section --- */
@@ -66,11 +69,17 @@
             border: 5px solid rgba(0, 238, 255, 0.2);
             box-shadow: 0 0 30px rgba(0, 238, 255, 0.1);
             transition: transform 0.5s ease;
-            width: 100%; max-width: 420px; /* limits size on large screens */ 
-            height: auto; /* keeps aspect ratio */ 
-            aspect-ratio: 1 / 1; /* ensures square shape */ 
-            border-radius: 50%; /* makes it a circle */ 
-            object-fit: cover; /* crops nicely */
+            width: 100%;
+            max-width: 420px;
+            /* limits size on large screens */
+            height: auto;
+            /* keeps aspect ratio */
+            aspect-ratio: 1 / 1;
+            /* ensures square shape */
+            border-radius: 50%;
+            /* makes it a circle */
+            object-fit: cover;
+            /* crops nicely */
         }
 
         .profile-img:hover {
@@ -161,153 +170,168 @@
         }
 
         /* Increase the size of social media icons and names */
-      .social-media-list li a {
-        font-size: 1.2rem;
-        /* Adjusts the font size for the text */
-        line-height: 2rem;
-        /* Adds spacing between lines */
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-      }
-
-      .social-media-list li a i {
-        font-size: 2rem;
-        /* Adjusts the icon size */
-        margin-right: 10px;
-        /* Adds space between the icon and text */
-      }
-      @keyframes scroll-left {
-        0% {
-          transform: translateX(0);
+        .social-media-list li a {
+            font-size: 1.2rem;
+            /* Adjusts the font size for the text */
+            line-height: 2rem;
+            /* Adds spacing between lines */
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
         }
-        100% {
-          transform: translateX(-50%);
+
+        .social-media-list li a i {
+            font-size: 2rem;
+            /* Adjusts the icon size */
+            margin-right: 10px;
+            /* Adds space between the icon and text */
         }
-      }
-      .social-section {
-        text-align: center;
-        padding: 3rem 1rem;
-      }
-      .social-section h2 {
-        font-weight: 700;
-        color: #4a4a4a;
-        margin-bottom: 2rem;
-      }
-      .social-icons a {
-        display: inline-block;
-        margin: 0 15px;
-        font-size: 2rem;
-        color: #fbfbfb;
-        transition: color 0.3s ease;
-      }
-      .social-icons a:hover {
-        color: #00eeff;
-      }
-      .social-label {
-        display: block;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        color: #6c757d;
-      }
-      .gradient-button {
-        font-family: "Rubik", sans-serif;
-        font-size: 1.1rem;
-        padding: 0.8rem 2.5rem;
-        border-radius: 50px;
-        backdrop-filter: blur(21px);
-        background: 
-          #004b4b55;
-        transition: all 0.5s ease-out;
-        overflow: hidden;
-        position: relative;
-        text-decoration: none;
-      }
 
-      .gradient-button:hover {
-        padding-left: calc(2.5rem + 5px);
-        padding-right: calc(2.5rem + 10px);
-      }
-      /* Achievement Image Hover Effect */
-.achievement-img-container {
-    overflow: hidden; /* This hides the parts of the image that go outside during zoom */
-    border-radius: 12px; /* Matches the card rounding */
-    height: 250px; /* Fixed height for uniformity */
-}
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
 
-.achievement-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth zoom out */
-}
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
-.glass-card:hover .achievement-img-container img {
-    transform: scale(1.1); /* Zoom level */
-}
+        .social-section {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
 
-/* Experience Timeline Styling */
-.timeline {
-    position: relative;
-    padding-left: 1rem;
-    margin: 0 auto;
-}
+        .social-section h2 {
+            font-weight: 700;
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+        }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--accent-blue), transparent);
-}
+        .social-icons a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 2rem;
+            color: #fbfbfb;
+            transition: color 0.3s ease;
+        }
 
-.timeline-item {
-    position: relative;
-    padding-left: 2.5rem;
-    margin-bottom: 3rem;
-}
+        .social-icons a:hover {
+            color: #00eeff;
+        }
 
-.timeline-marker {
-    position: absolute;
-    left: -6px;
-    top: 5px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--accent-blue);
-    box-shadow: 0 0 10px var(--accent-blue);
-}
+        .social-label {
+            display: block;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            color: #6c757d;
+        }
 
-.experience-date {
-    font-size: 0.85rem;
-    color: var(--accent-blue);
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-}
+        .gradient-button {
+            font-family: "Rubik", sans-serif;
+            font-size: 1.1rem;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            backdrop-filter: blur(21px);
+            background:
+                #004b4b55;
+            transition: all 0.5s ease-out;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+        }
 
-.experience-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: 0.3s;
-}
+        .gradient-button:hover {
+            padding-left: calc(2.5rem + 5px);
+            padding-right: calc(2.5rem + 10px);
+        }
 
-.experience-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: var(--accent-blue);
-}
+        /* Achievement Image Hover Effect */
+        .achievement-img-container {
+            overflow: hidden;
+            /* This hides the parts of the image that go outside during zoom */
+            border-radius: 12px;
+            /* Matches the card rounding */
+            height: 250px;
+            /* Fixed height for uniformity */
+        }
+
+        .achievement-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            /* Smooth zoom out */
+        }
+
+        .glass-card:hover .achievement-img-container img {
+            transform: scale(1.1);
+            /* Zoom level */
+        }
+
+        /* Experience Timeline Styling */
+        .timeline {
+            position: relative;
+            padding-left: 1rem;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-blue), transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .experience-date {
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: 0.3s;
+        }
+
+        .experience-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--accent-blue);
+        }
     </style>
 </head>
 
 <body>
     <header class="fixed-top py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <a href="#" class="text-white font-bold text-xl tracking-tighter">VW<span style="color:var(--accent-blue)">.</span></a>
+            <a href="#" class="text-white font-bold text-xl tracking-tighter">VW<span
+                    style="color:var(--accent-blue)">.</span></a>
             <nav class="d-none d-md-flex">
                 <a class="mx-3 nav-link-custom" href="#home">Home</a>
                 <a class="mx-3 nav-link-custom" href="#aboutme">About</a>
@@ -316,10 +340,9 @@
                 <a class="mx-3 nav-link-custom" href="#projects">Projects</a>
                 <a class="mx-3 nav-link-custom" href="#certification">Certifications</a>
             </nav>
-            <a href="#connect" 
-   class="btn btn-main">
-   Hire Me
-</a>
+            <a href="#connect" class="btn btn-main">
+                Hire Me
+            </a>
         </div>
     </header>
 
@@ -327,15 +350,19 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5 mt-5 pt-3 text-center" data-aos="fade-right">
-                    <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/v.jpg" alt="Vaibhav" class="img-fluid rounded-circle profile-img mx-auto" style="width: 420px; height: 420px; object-fit: cover;">
+                    <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/v.jpg" alt="Vaibhav"
+                        class="img-fluid rounded-circle profile-img mx-auto"
+                        style="width: 420px; height: 420px; object-fit: cover;">
                 </div>
                 <div class="col-md-7 mt-5 mt-md-0" data-aos="fade-left">
                     <h5 class="h3 text-secondary mb-4">Hello, I am</h5>
                     <h1 class="display-3 font-bold mb-3 glowing-text">Vaibhav Waghmare</h1>
-                    <h2 class="h4 text-primary mb-4">Building the Future of the Web with AI & Full-Stack Innovation.</h2>
+                    <h2 class="h4 text-primary mb-4">Building the Future of the Web with AI & Full-Stack Innovation.
+                    </h2>
                     <div class="d-flex gap-3 mb-2">
-                        
-                        <a href="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Vaibhav Waghmare CV.pdf" class="btn gradient-button position-relative text-white">Download CV</a>
+
+                        <a href="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Vaibhav Waghmare CV.pdf"
+                            class="btn gradient-button position-relative text-white">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -348,13 +375,21 @@
                 <div class="col-lg-8" data-aos="fade-up">
                     <h2 class="display-5 font-bold mb-4">About Me</h2>
                     <p class="lead text-gray-400 mb-4" style="line-height: 1.8;">
-                        <strong>Ai Full Stack Developer | Generative AI Engineer | Prompt Engineering | Front-End Developer | Data Analyst </strong>
-            <br />------------------------------------------------------------<br />
-                        I am an AI-Augmented Full-Stack Developer and MCA student dedicated to building intelligent, user-centric digital experiences at the intersection of robust engineering and Generative AI. Expert in the Full Stack Development, I specialize in architecting scalable applications enhanced by advanced Prompt Engineering and OpenAI API integrations to automate complex workflows. Beyond development, I leverage Data Analytics to transform raw data into actionable insights and operational efficiency. Whether I am designing high-performance backends or fine-tuning sophisticated AI models, my mission is to bridge the gap between technical complexity and intuitive, high-impact design.
+                        <strong>Ai Full Stack Developer | Generative AI Engineer | Prompt Engineering | Front-End
+                            Developer | Data Analyst </strong>
+                        <br />------------------------------------------------------------<br />
+                        I am an AI-Augmented Full-Stack Developer and MCA student dedicated to building intelligent,
+                        user-centric digital experiences at the intersection of robust engineering and Generative AI.
+                        Expert in the Full Stack Development, I specialize in architecting scalable applications
+                        enhanced by advanced Prompt Engineering and OpenAI API integrations to automate complex
+                        workflows. Beyond development, I leverage Data Analytics to transform raw data into actionable
+                        insights and operational efficiency. Whether I am designing high-performance backends or
+                        fine-tuning sophisticated AI models, my mission is to bridge the gap between technical
+                        complexity and intuitive, high-impact design.
                     </p><br />------------------------------------------------------------<br />
                     <h2 class="text-auto font-weight-medium text-uppercase text-sm">
-            Vaibhav Waghmare
-          </h2>
+                        Vaibhav Waghmare
+                    </h2>
                     <div class="row text-left mt-5">
                         <div class="col-md-4 mb-3">
                             <h6 class="text-info">Location</h6>
@@ -375,170 +410,267 @@
     </section>
 
     <section id="experience" class="py-5" style="background: var(--primary-bg);">
-    <div class="container py-5">
-        <h2 class="display-5 font-bold text-center mb-5" data-aos="fade-up">Work Experience</h2>
-        
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <div class="timeline">
-                    
-                    <div class="timeline-item" data-aos="fade-left">
-    <div class="timeline-marker"></div>
-    <span class="experience-date"> 1 January 2025 — 30 June 2025 </span>
-    <div class="experience-card">
-        <h4 class="h5 font-bold text-white mb-1">Full Stack Developer Intern (Generative AI)</h4>
-        <p class="text-info text-sm mb-3 font-semibold">Earth Solutions Pvt. Ltd. | Solapur, MH (Live Project)</p>
-        <ul class="text-gray-400 text-sm" style="list-style: disc; padding-left: 1.2rem;">
-            
-            <li class="mb-2"><strong>End-to-End Development:</strong> Built and maintained a live project using <strong>React</strong> for the UI and <strong>Django</strong> for server-side logic.</li>
-            <li class="mb-2"><strong>Database & API:</strong> Designed flexible schemas in <strong>MongoDB</strong> and utilized <strong>Postman</strong> for rigorous REST API testing and documentation.</li>
-            <li class="mb-2"><strong>Modern UI:</strong> Leveraged <strong>Bootstrap 5</strong> to ensure a professional, clean, and responsive design for the final production build.</li>
-        </ul>
-        <div class="mt-3">
-            <span class="skill-badge">Gen-AI</span>
-            <span class="skill-badge">Bootstrap</span>
-            <span class="skill-badge">API</span>
-            <span class="skill-badge">Django</span>
-            <span class="skill-badge">React</span>
-            <span class="skill-badge">MongoDB</span>
-        </div>
-    </div>
-</div>
+        <div class="container py-5">
+            <h2 class="display-5 font-bold text-center mb-5" data-aos="fade-up">Work Experience</h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="timeline">
+
+                        <div class="timeline-item" data-aos="fade-left">
+                            <div class="timeline-marker"></div>
+                            <span class="experience-date"> 1 January 2025 — 30 June 2025 </span>
+                            <div class="experience-card">
+                                <h4 class="h5 font-bold text-white mb-1">Full Stack Developer Intern (Generative AI)
+                                </h4>
+                                <p class="text-info text-sm mb-3 font-semibold">Earth Solutions Pvt. Ltd. | Solapur, MH
+                                    (Live Project)</p>
+                                <ul class="text-gray-400 text-sm" style="list-style: disc; padding-left: 1.2rem;">
+
+                                    <li class="mb-2"><strong>End-to-End Development:</strong> Built and maintained a
+                                        live project using <strong>React</strong> for the UI and <strong>Django</strong>
+                                        for server-side logic.</li>
+                                    <li class="mb-2"><strong>Database & API:</strong> Designed flexible schemas in
+                                        <strong>MongoDB</strong> and utilized <strong>Postman</strong> for rigorous REST
+                                        API testing and documentation.
+                                    </li>
+                                    <li class="mb-2"><strong>Modern UI:</strong> Leveraged <strong>Bootstrap 5</strong>
+                                        to ensure a professional, clean, and responsive design for the final production
+                                        build.</li>
+                                </ul>
+                                <div class="mt-3">
+                                    <span class="skill-badge">Gen-AI</span>
+                                    <span class="skill-badge">Bootstrap</span>
+                                    <span class="skill-badge">API</span>
+                                    <span class="skill-badge">Django</span>
+                                    <span class="skill-badge">React</span>
+                                    <span class="skill-badge">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="client-work" class="py-5" style="background:#0f0f0f;">
-  <div class="container py-5">
-    
-    <h2 class="display-5 font-bold text-center mb-3" data-aos="fade-up">
-      Client Projects
-    </h2>
-    <p class="text-center text-gray-400 mb-5" data-aos="fade-up" data-aos-delay="100">
-      Real-world websites delivered to clients with modern UI, performance & scalability
-    </p>
+    <section id="client-work" class="py-5" style="background:#0f0f0f;">
+        <div class="container py-5">
 
-    <div class="row g-4">
-
-      <!-- Client Website Card -->
-      <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-        <div class="glass-card h-100 overflow-hidden">
-
-          <div class="project-img-container">
-            <img src="https://th.bing.com/th/id/R.85e196b0548ddba298fe8b3b2e7be6d6?rik=6ILXwsryovs%2bZg&riu=http%3a%2f%2farticles.connectnigeria.com%2fwp-content%2fuploads%2f2022%2f07%2fportfolio-design-awesome.jpg&ehk=hoWayXojOM1%2b9EohNJ65tyn1uaaCnMCq75aFs6ge2zE%3d&risl=&pid=ImgRaw&r=0" alt="Client Website">
-          </div>
-
-          <div class="p-4">
-            <h5 class="font-bold mb-1">3D Artist & Motion Graphics Designer Portfolio</h5>
-            <p class="text-info text-sm mb-2">Portfolio</p>
-
-            <p class="text-gray-400 text-sm mb-3">
-              Designed and developed a responsive, website with fast load speed and modern UI.
+            <h2 class="display-5 font-bold text-center mb-3" data-aos="fade-up">
+                Client Projects
+            </h2>
+            <p class="text-center text-gray-400 mb-5" data-aos="fade-up" data-aos-delay="100">
+                Real-world websites delivered to clients with modern UI, performance & scalability
             </p>
 
-            <div class="mb-3">
-              <span class="skill-badge">HTML</span>
-              <span class="skill-badge">CSS</span>
-              <span class="skill-badge">Bootstrap</span>
-              <span class="skill-badge">JavaScript</span>
+            <div class="row g-4">
+
+                <!-- Client Website Card -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="glass-card h-100 overflow-hidden">
+
+                        <div class="project-img-container">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=2070&auto=format&fit=crop"
+                                alt="Resume-Ai Platform Interface">
+                        </div>
+
+                        <div class="p-4">
+                            <h5 class="font-bold mb-1">Resume-Ai: ATS Optimizer</h5>
+                            <p class="text-info text-sm mb-2">Full Stack AI SaaS</p>
+
+                            <p class="text-gray-400 text-sm mb-3">
+                                A smart recruitment tool that uses LLMs to bridge the gap between job descriptions and
+                                resumes.
+                                Features automated tailoring, ATS scoring, and high-performance PDF generation.
+                            </p>
+
+                            <div class="mb-3">
+                                <span class="skill-badge">Google Antigravity</span>
+                                <span class="skill-badge">FastAPI</span>
+                                <span class="skill-badge">React</span>
+                                <span class="skill-badge">AI Agents</span>
+                                <span class="skill-badge">LLM API</span>
+                                <span class="skill-badge">PDF Generation</span>
+                            </div>
+
+                            <div class="d-flex gap-2">
+                                <a href="https://github.com/Vaibhaavw/Resume-Ai" target="_blank"
+                                    class="btn btn-sm btn-outline-info rounded-pill px-3">
+                                    <i class="fab fa-github mr-1"></i> Code
+                                </a>
+                                <a href="https://resume-ai-wine-delta.vercel.app/" target="_blank"
+                                    class="btn btn-sm btn-info rounded-pill px-3 text-white">
+                                    Visit Website
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="glass-card h-100 overflow-hidden">
+
+                        <div class="project-img-container">
+                            <img src="https://th.bing.com/th/id/R.85e196b0548ddba298fe8b3b2e7be6d6?rik=6ILXwsryovs%2bZg&riu=http%3a%2f%2farticles.connectnigeria.com%2fwp-content%2fuploads%2f2022%2f07%2fportfolio-design-awesome.jpg&ehk=hoWayXojOM1%2b9EohNJ65tyn1uaaCnMCq75aFs6ge2zE%3d&risl=&pid=ImgRaw&r=0"
+                                alt="Client Website">
+                        </div>
+
+                        <div class="p-4">
+                            <h5 class="font-bold mb-1">3D Artist & Motion Graphics Designer Portfolio</h5>
+                            <p class="text-info text-sm mb-2">Portfolio</p>
+
+                            <p class="text-gray-400 text-sm mb-3">
+                                Designed and developed a responsive, website with fast load speed and modern UI.
+                            </p>
+
+                            <div class="mb-3">
+                                <span class="skill-badge">HTML</span>
+                                <span class="skill-badge">CSS</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">JavaScript</span>
+                            </div>
+
+                            <a href="https://abhishekhibare1305.github.io/abhishekhibare1305/" target="_blank"
+                                class="btn btn-sm btn-info rounded-pill px-3 text-white">
+                                Visit Website
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Duplicate card for more clients -->
+
             </div>
-
-            <a href="https://abhishekhibare1305.github.io/abhishekhibare1305/" target="_blank" class="btn btn-sm btn-outline-info rounded-pill">
-              Visit Website
-            </a>
-          </div>
-
         </div>
-      </div>
-
-      <!-- Duplicate card for more clients -->
-
-    </div>
-  </div>
-</section>
+    </section>
 
     <section id="Language" class="py-5" style="background: linear-gradient(45deg,#00eeffb3,#ba26ffbb);">
         <div class="container py-5">
             <h2 class="text-center display-5 font-bold mb-5">Technical Toolkit</h2>
             <div class="row g-3">
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-caret-up fa-2x text-light mb-2"></i>
+                        <p class="m-0 font-bold">Vercel</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-heart fa-2x text-danger mb-2"></i>
+                        <p class="m-0 font-bold">Lovable</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-code fa-2x text-warning mb-2"></i>
+                        <p class="m-0 font-bold">Replit</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-rocket fa-2x text-primary mb-2"></i>
+                        <p class="m-0 font-bold">Antigravity</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-user-gear fa-2x text-success mb-2"></i>
+                        <p class="m-0 font-bold">AI Agents</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="800">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-bolt fa-2x text-teal mb-2" style="color: #05998b;"></i>
+                        <p class="m-0 font-bold">FastAPI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3  pt-4">
                 <div class="col-6 col-md-3 col-lg-2 " data-aos="fade-up" data-aos-delay="100">
-        <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
-            <i class="fas fa-robot fa-2x text-success mb-2"></i>
-            <p class="m-0 font-bold">Generative AI</p>
-        </div>
-    </div>
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-robot fa-2x text-success mb-2"></i>
+                        <p class="m-0 font-bold">Generative AI</p>
+                    </div>
+                </div>
                 <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
-                    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
                         <i class="fab fa-react fa-2x text-info mb-2"></i>
                         <p class="m-0 font-bold">ReactJS</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-        <i class="fab fa-envira fa-2x mb-2" style="color: #47A248;"></i>
-        <p class="m-0 font-bold">MongoDB</p>
-    </div>
-</div>
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fab fa-envira fa-2x mb-2" style="color: #47A248;"></i>
+                        <p class="m-0 font-bold">MongoDB</p>
+                    </div>
+                </div>
                 <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
                         <i class="fab fa-python fa-2x text-warning mb-2"></i>
                         <p class="m-0 font-bold">Python</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
                         <i class="fas fa-database fa-2x text-primary mb-2"></i>
                         <p class="m-0 font-bold">SQL</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-                    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
                         <i class="fab fa-bootstrap fa-2x text-purple-500 mb-2"></i>
                         <p class="m-0 font-bold">Bootstrap</p>
                     </div>
                 </div>
             </div>
             <div class="row g-3 pt-4">
-    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
-        <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-            <i class="fas fa-brain fa-2x text-warning mb-2"></i>
-            <p class="m-0 font-bold">ML</p>
-        </div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-        <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-            <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
-            <p class="m-0 font-bold">Power BI</p>
-        </div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
-    <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-        <i class="fas fa-file-lines fa-2x text-purple-500 mb-2"></i>
-        <p class="m-0 font-bold">Microsoft Office</p>
-    </div>
-</div>
-<div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
-        <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-            <i class="fab fa-html5 fa-2x text-info mb-2"></i>
-            <p class="m-0 font-bold">HTML</p>
-        </div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
-        <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-            <i class="fab fa-css3-alt fa-2x text-success mb-2"></i>
-            <p class="m-0 font-bold">CSS</p>
-        </div>
-    </div>
-    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
-        <div class="glass-card p-3 text-center"style="background: var(--primary-bg);">
-            <i class="fab fa-python fa-2x text-warning mb-2"></i>
-            <p class="m-0 font-bold">Django</p>
-        </div>
-    </div>
-</div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="700">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-terminal fa-2x text-secondary mb-2"></i>
+                        <p class="m-0 font-bold">Prompts</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-chart-bar fa-2x text-warning mb-2"></i>
+                        <p class="m-0 font-bold">Power BI</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fas fa-file-lines fa-2x text-purple-500 mb-2"></i>
+                        <p class="m-0 font-bold">Microsoft Office</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fab fa-html5 fa-2x text-info mb-2"></i>
+                        <p class="m-0 font-bold">HTML</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fab fa-css3-alt fa-2x text-success mb-2"></i>
+                        <p class="m-0 font-bold">CSS</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-3 text-center" style="background: var(--primary-bg);">
+                        <i class="fab fa-python fa-2x text-warning mb-2"></i>
+                        <p class="m-0 font-bold">Django</p>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -549,108 +681,130 @@
         <div class="container py-5">
             <h2 class="display-5 font-bold text-center mb-5" data-aos="fade-up">Featured Projects</h2>
             <div class="row g-4">
-                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-    <div class="glass-card h-100 overflow-hidden">
-        <div class="project-img-container">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop" alt="Home Meal Hub App">
-        </div>
-        <div class="p-4">
-            <h5 class="font-bold mb-2">Home Meal Hub</h5>
-            <p class="text-gray-400 text-sm mb-3">A Zomato-inspired end-to-end platform for discovering and ordering home-cooked meals based on proximity.</p>
-            <div class="mb-3">
-                <span class="skill-badge">React</span>
-                <span class="skill-badge">Django</span>
-                <span class="skill-badge">MongoDB</span>
-                <span class="skill-badge">OpenAI API</span>
-                <span class="skill-badge">Geolocation</span>
-            </div>
-            <a href="https://github.com/Vaibhaavw/home-meal-hub" class="text-info font-bold text-sm" target="_blank">View Source <i class="fas fa-arrow-right ml-1"></i></a>
-        </div>
-    </div>
-</div>
 
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="glass-card h-100 overflow-hidden">
                         <div class="project-img-container">
-                            <img src="https://tse2.mm.bing.net/th/id/OIP.Sss7ayjUXCGzxjUolx5OLwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Webapp App">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop"
+                                alt="Home Meal Hub App">
+                        </div>
+                        <div class="p-4">
+                            <h5 class="font-bold mb-2">Home Meal Hub</h5>
+                            <p class="text-gray-400 text-sm mb-3">A Zomato-inspired end-to-end platform for discovering
+                                and ordering home-cooked meals based on proximity.</p>
+                            <div class="mb-3">
+                                <span class="skill-badge">React</span>
+                                <span class="skill-badge">Django</span>
+                                <span class="skill-badge">MongoDB</span>
+                                <span class="skill-badge">OpenAI API</span>
+                                <span class="skill-badge">Geolocation</span>
+                            </div>
+                            <a href="https://github.com/Vaibhaavw/home-meal-hub" class="text-info font-bold text-sm"
+                                target="_blank">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card h-100 overflow-hidden">
+                        <div class="project-img-container">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.Sss7ayjUXCGzxjUolx5OLwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Webapp App">
                         </div>
                         <div class="p-4">
                             <h5 class="font-bold mb-2">Students Lead Management Web Application</h5>
-                            <p class="text-gray-400 text-sm mb-3">Web application for managing newly generated student's leads.</p>
+                            <p class="text-gray-400 text-sm mb-3">Web application for managing newly generated student's
+                                leads.</p>
                             <div class="mb-3">
                                 <span class="skill-badge">Python</span>
                                 <span class="skill-badge">Django</span>
                                 <span class="skill-badge">API</span>
                                 <span class="skill-badge">Mongo DB</span>
                             </div>
-                            <a href="#" class="text-info font-bold text-sm">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="#" class="text-info font-bold text-sm">View Source <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="glass-card h-100 overflow-hidden">
                         <div class="project-img-container">
-                            <img src="https://repository-images.githubusercontent.com/688590848/55c4a0d2-7701-47a9-9844-fe723f636199" alt="Gym App">
+                            <img src="https://repository-images.githubusercontent.com/688590848/55c4a0d2-7701-47a9-9844-fe723f636199"
+                                alt="Gym App">
                         </div>
                         <div class="p-4">
                             <h5 class="font-bold mb-2">Gym Management</h5>
-                            <p class="text-gray-400 text-sm mb-3">Java desktop application for managing member attendance and maintenance records.</p>
+                            <p class="text-gray-400 text-sm mb-3">Java desktop application for managing member
+                                attendance and maintenance records.</p>
                             <div class="mb-3">
                                 <span class="skill-badge">Java</span>
                                 <span class="skill-badge">MySQL</span>
                             </div>
-                            <a href="https://github.com/Vaibhaavw/Gym-Management-System-using-JAVA/blob/87a1ae8c2fb35281313d6640a6e66884c6b97af1/Gym%20Management%20System%20in%20JAVA.rar" class="text-info font-bold text-sm">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="https://github.com/Vaibhaavw/Gym-Management-System-using-JAVA/blob/87a1ae8c2fb35281313d6640a6e66884c6b97af1/Gym%20Management%20System%20in%20JAVA.rar"
+                                class="text-info font-bold text-sm">View Source <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
                     <div class="glass-card h-100 overflow-hidden">
                         <div class="project-img-container">
-                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231231112540/C-Programming-Language.png" alt="Student Management">
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231231112540/C-Programming-Language.png"
+                                alt="Student Management">
                         </div>
                         <div class="p-4">
                             <h5 class="font-bold mb-2">Student Data Management</h5>
-                            <p class="text-gray-400 text-sm mb-3">Efficient record management system built in C focusing on data structures.</p>
+                            <p class="text-gray-400 text-sm mb-3">Efficient record management system built in C focusing
+                                on data structures.</p>
                             <div class="mb-3">
                                 <span class="skill-badge">C Language</span>
                                 <span class="skill-badge">File Handling</span>
                             </div>
-                            <a href="https://github.com/Vaibhaavw/SRMS-Project-in-C/blob/c426ae3ad1d041847f088e78dc282174d617e5fc/Student%20Record%20MGM%20System%20in%20C.rar" class="text-info font-bold text-sm">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="https://github.com/Vaibhaavw/SRMS-Project-in-C/blob/c426ae3ad1d041847f088e78dc282174d617e5fc/Student%20Record%20MGM%20System%20in%20C.rar"
+                                class="text-info font-bold text-sm">View Source <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
                     <div class="glass-card h-100 overflow-hidden">
                         <div class="project-img-container">
-                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Csharp.png" alt="Billing System">
+                            <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Csharp.png"
+                                alt="Billing System">
                         </div>
                         <div class="p-4">
                             <h5 class="font-bold mb-2">Computer Shop Billing</h5>
-                            <p class="text-gray-400 text-sm mb-3">Automated stock and billing solution for retail hardware shops.</p>
+                            <p class="text-gray-400 text-sm mb-3">Automated stock and billing solution for retail
+                                hardware shops.</p>
                             <div class="mb-3">
                                 <span class="skill-badge">C#</span>
                                 <span class="skill-badge">.NET</span>
                                 <span class="skill-badge">MSSQL</span>
                             </div>
-                            <a href="https://github.com/Vaibhaavw/Computer-Shop-Billing-System-in-C-/blob/343357fdf7b3b4ed1f01b1cb35172aae70c76c6a/Computer%20Shop%20Billing%20System.rar" class="text-info font-bold text-sm">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="https://github.com/Vaibhaavw/Computer-Shop-Billing-System-in-C-/blob/343357fdf7b3b4ed1f01b1cb35172aae70c76c6a/Computer%20Shop%20Billing%20System.rar"
+                                class="text-info font-bold text-sm">View Source <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
                     <div class="glass-card h-100 overflow-hidden">
                         <div class="project-img-container">
-                            <img src="https://tse2.mm.bing.net/th/id/OIP.Sss7ayjUXCGzxjUolx5OLwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Webapp App">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.Sss7ayjUXCGzxjUolx5OLwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Webapp App">
                         </div>
                         <div class="p-4">
                             <h5 class="font-bold mb-2">Scraper Project from Flipkart</h5>
-                            <p class="text-gray-400 text-sm mb-3">Goal to exctract the data from Flipkart for data collection and visualization.</p>
+                            <p class="text-gray-400 text-sm mb-3">Goal to exctract the data from Flipkart for data
+                                collection and visualization.</p>
                             <div class="mb-3">
                                 <span class="skill-badge">Python</span>
                                 <span class="skill-badge">Beautifulsoup</span>
                                 <span class="skill-badge">Flask</span>
                                 <span class="skill-badge">Pymongo</span>
                             </div>
-                            <a href="#" class="text-info font-bold text-sm">View Source <i class="fas fa-arrow-right ml-1"></i></a>
+                            <a href="#" class="text-info font-bold text-sm">View Source <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -659,288 +813,267 @@
     </section>
 
 
-      <section id="certification" class="py-5" style="background: var(--primary-bg);">
-    <div class="container py-5">
-        <h2 class="display-5 font-bold text-center mb-5" data-aos="fade-up"> Certifications</h2>
-        <div class="row g-4">
+    <section id="certification" class="py-5" style="background: var(--primary-bg);">
+        <div class="container py-5">
+            <h2 class="display-5 font-bold text-center mb-5" data-aos="fade-up"> Certifications</h2>
+            <div class="row g-4">
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/PowerBI.jpeg" alt="Achievement 0">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Power BI for Beginners</h5>
-                        <p class="text-gray-400 text-sm">By the Coursera.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_powerbi-certification-dataanalytics-activity-7296551662083563520-a8EL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEh5Y64BV56cOSWurJN7CcKMyvi4LJFlMy0"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/PowerBI.jpeg"
+                                alt="Achievement 0">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Power BI for Beginners</h5>
+                            <p class="text-gray-400 text-sm">By the Coursera.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_powerbi-certification-dataanalytics-activity-7296551662083563520-a8EL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEh5Y64BV56cOSWurJN7CcKMyvi4LJFlMy0"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg" alt="Achievement 1">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Introduction to Cyber Security</h5>
-                        <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-ciscocertification-mitvpu-activity-7247568992859492353-e0EQ?utm_source=share&utm_medium=member_desktop"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cyber Security.jpeg"
+                                alt="Achievement 1">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Introduction to Cyber Security</h5>
+                            <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-ciscocertification-mitvpu-activity-7247568992859492353-e0EQ?utm_source=share&utm_medium=member_desktop"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg" alt="Achievement 2">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Cyber Threat Management</h5>
-                        <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-continuouslearning-cisconetworkingacademy-activity-7279917386068033536-XJut?utm_source=share&utm_medium=member_desktop"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Cyber Threat Management.jpeg"
+                                alt="Achievement 2">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Cyber Threat Management</h5>
+                            <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_cybersecurity-continuouslearning-cisconetworkingacademy-activity-7279917386068033536-XJut?utm_source=share&utm_medium=member_desktop"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg" alt="Achievement 3">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Introduction to Android Mobile Application Development</h5>
-                        <p class="text-gray-400 text-sm">By Meta on Coursera.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_androiddevelopment-coursera-lifelonglearning-activity-7266833277125087233-Rjk6?utm_source=share&utm_medium=member_desktop"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Mobile Application Development.jpeg"
+                                alt="Achievement 3">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Introduction to Android Mobile Application Development</h5>
+                            <p class="text-gray-400 text-sm">By Meta on Coursera.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_androiddevelopment-coursera-lifelonglearning-activity-7266833277125087233-Rjk6?utm_source=share&utm_medium=member_desktop"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg" alt="Achievement 4">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Generative AI and LLMs Architecture and Data Preparation</h5>
-                        <p class="text-gray-400 text-sm">By IBM on Coursera.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_completion-certificate-for-generative-ai-activity-7261604631359721472-qQ10?utm_source=share&utm_medium=member_desktop"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Generative AI and LLMs.jpeg"
+                                alt="Achievement 4">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Generative AI and LLMs Architecture and Data Preparation</h5>
+                            <p class="text-gray-400 text-sm">By IBM on Coursera.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_completion-certificate-for-generative-ai-activity-7261604631359721472-qQ10?utm_source=share&utm_medium=member_desktop"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg" alt="Achievement 5">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Introduction to Cloud Computing</h5>
-                        <p class="text-gray-400 text-sm">By IBM on Coursera.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_cloudcomputing-ibm-coursera-activity-7280611159722934272--f7p?utm_source=share&utm_medium=member_desktop"
-                  class="glowing-text"
-                  >Know More</a
-                >
+
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/Introduction to Cloud Computing.jpeg"
+                                alt="Achievement 5">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Introduction to Cloud Computing</h5>
+                            <p class="text-gray-400 text-sm">By IBM on Coursera.</p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_cloudcomputing-ibm-coursera-activity-7280611159722934272--f7p?utm_source=share&utm_medium=member_desktop"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg" alt="Achievement 6">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">What is Social</h5>
-                        <p class="text-gray-400 text-sm">By Northwestern University and offered through Coursera.</p>
-                        <a
-                  href="https://www.linkedin.com/posts/waghmare-vaibhaav_whatissocial-coursera-northwesternuniversity-activity-7266835436948398080-qSGb?utm_source=share&utm_medium=member_deskto"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/What is Social1.jpeg"
+                                alt="Achievement 6">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">What is Social</h5>
+                            <p class="text-gray-400 text-sm">By Northwestern University and offered through Coursera.
+                            </p>
+                            <a href="https://www.linkedin.com/posts/waghmare-vaibhaav_whatissocial-coursera-northwesternuniversity-activity-7266835436948398080-qSGb?utm_source=share&utm_medium=member_deskto"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg" alt="Achievement 7">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">NDG Linux Unhatched course</h5>
-                        <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
-                        <a
-                  href="https://www.netacad.com"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp3.jpeg"
+                                alt="Achievement 7">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">NDG Linux Unhatched course</h5>
+                            <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
+                            <a href="https://www.netacad.com" class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg" alt="Achievement 8">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">NDG Linux Essential course</h5>
-                        <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
-                        <a
-                  href="https://www.netacad.com"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp4.jpeg"
+                                alt="Achievement 8">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">NDG Linux Essential course</h5>
+                            <p class="text-gray-400 text-sm">By the Cisco Networking Academy.</p>
+                            <a href="https://www.netacad.com" class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg" alt="Achievement 9">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Problem Solving Using Computational Thinking</h5>
-                        <p class="text-gray-400 text-sm">By Penn University on Coursera.</p>
-                        <a
-                  href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/computational-thinking-problem-solving"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp1.jpeg"
+                                alt="Achievement 9">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Problem Solving Using Computational Thinking</h5>
+                            <p class="text-gray-400 text-sm">By Penn University on Coursera.</p>
+                            <a href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/computational-thinking-problem-solving"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="glass-card h-100 p-3">
-                    <div class="achievement-img-container">
-                        <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp2.jpeg" alt="Achievement 10">
-                    </div>
-                    <div class="mt-3">
-                        <h5 class="font-bold">Practical Python for AI Coding 1</h5>
-                        <p class="text-gray-400 text-sm">By KAIST on Coursera.</p>
-                        <a
-                  href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/practical-python-for-ai-coding--preparation-for-coding"
-                  class="glowing-text"
-                  >Know More</a
-                >
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card h-100 p-3">
+                        <div class="achievement-img-container">
+                            <img src="https://github.com/Vaibhaavw/Vaibhaavw.github.io/raw/main/cp2.jpeg"
+                                alt="Achievement 10">
+                        </div>
+                        <div class="mt-3">
+                            <h5 class="font-bold">Practical Python for AI Coding 1</h5>
+                            <p class="text-gray-400 text-sm">By KAIST on Coursera.</p>
+                            <a href="https://www.coursera.org/programs/learning-program-for-mit-vpu-students-uac6l/learn/practical-python-for-ai-coding--preparation-for-coding"
+                                class="glowing-text">Know More</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-    
-</section>
+    </section>
 
 
     <section id="connect" class="social-section" style="background: #0f0f0f">
-      <h2>Social Media Handles</h2>
-      <div class="social-icons" data-aos="fade-up" data-aos-delay="500">
-        <a
-          href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin"></i>
-          <span class="social-label">LinkedIn</span>
-        </a>
-        <a href="https://github.com/Vaibhaavw" target="_blank">
-          <i class="fab fa-github"></i>
-          <span class="social-label">GitHub</span>
-        </a>
-        <a href="https://t.me/vaibhaavw9527" target="_blank">
-          <i class="fab fa-telegram"></i>
-          <span class="social-label">Telegram</span>
-        </a>
-        <a href="https://www.instagram.com/mr.vaibhaav" target="_blank">
-          <i class="fab fa-instagram"></i>
-          <span class="social-label">Instagram</span>
-        </a>
-        <a href="https://www.facebook.com/Vaibhaav Waghmare" target="_blank">
-          <i class="fab fa-facebook"></i>
-          <span class="social-label">Facebook</span>
-        </a>
-      </div>
+        <h2>Social Media Handles</h2>
+        <div class="social-icons" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span class="social-label">LinkedIn</span>
+            </a>
+            <a href="https://github.com/Vaibhaavw" target="_blank">
+                <i class="fab fa-github"></i>
+                <span class="social-label">GitHub</span>
+            </a>
+            <a href="https://t.me/vaibhaavw9527" target="_blank">
+                <i class="fab fa-telegram"></i>
+                <span class="social-label">Telegram</span>
+            </a>
+            <a href="https://www.instagram.com/mr.vaibhaav" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <span class="social-label">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/Vaibhaav Waghmare" target="_blank">
+                <i class="fab fa-facebook"></i>
+                <span class="social-label">Facebook</span>
+            </a>
+        </div>
     </section>
 
 
 
     <footer style="background: linear-gradient(45deg,#00eeffb3,#ba26ffbb);">
-        <div class="container" data-aos="fade-up" data-aos-delay="600" >
+        <div class="container" data-aos="fade-up" data-aos-delay="600">
             <div class="row">
-                <div class="col-md-6" >
+                <div class="col-md-6">
                     <h2 class=" display-6">Ready to Build Something Amazing?<br>Let's Connect</h2>
-                    <br class="text-gray-500 mb-4">I'm open to full-time roles, freelance projects, and AI-driven collaborations.</p><br>
+                    <br class="text-gray-500 mb-4">I'm open to full-time roles, freelance projects, and AI-driven
+                    collaborations.</p><br>
                     <div class="d-flex">
                         <a href="https://github.com/Vaibhaavw" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/vaibhav-waghmare-57a25a29b/" class="social-link"><i
+                                class="fab fa-linkedin"></i></a>
                         <a href="https://t.me/vaibhaavw9527" class="social-link"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6"data-aos="fade-up" data-aos-delay="700">
-                    <form id="contactForm" class="glass-card p-4"  style="background:#0f0f0f">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
+                    <form id="contactForm" class="glass-card p-4" style="background:#0f0f0f">
                         <div class="mb-3">
-                            <input type="text" id="name" class="form-control bg-transparent text-white border-secondary" placeholder="Your Name" required>
+                            <input type="text" id="name" class="form-control bg-transparent text-white border-secondary"
+                                placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="email" id="email" class="form-control bg-transparent text-white border-secondary" placeholder="Email Address" required>
+                            <input type="email" id="email"
+                                class="form-control bg-transparent text-white border-secondary"
+                                placeholder="Email Address" required>
                         </div>
                         <button type="submit" class="btn btn-main w-100">Send Message</button>
                     </form>
                 </div>
                 <script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop default form submission
+                    document.getElementById("contactForm").addEventListener("submit", function (e) {
+                        e.preventDefault(); // stop default form submission
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+                        const name = document.getElementById("name").value;
+                        const email = document.getElementById("email").value;
 
-    const subject = encodeURIComponent("New Project Inquiry from Portfolio");
-    const body = encodeURIComponent(
-        "Hi Vaibhav,\n\n" +
-        "My Name: " + name + "\n" +
-        "My Email: " + email + "\n\n" +
-        "I would like to discuss a project with you."
-    );
+                        const subject = encodeURIComponent("New Project Inquiry from Portfolio");
+                        const body = encodeURIComponent(
+                            "Hi Vaibhav,\n\n" +
+                            "My Name: " + name + "\n" +
+                            "My Email: " + email + "\n\n" +
+                            "I would like to discuss a project with you."
+                        );
 
-    const gmailURL = 
-        "https://mail.google.com/mail/?view=cm&fs=1&to=vaibhaavw@gmail.com" +
-        "&su=" + subject +
-        "&body=" + body;
+                        const gmailURL =
+                            "https://mail.google.com/mail/?view=cm&fs=1&to=vaibhaavw@gmail.com" +
+                            "&su=" + subject +
+                            "&body=" + body;
 
-    window.open(gmailURL, "_blank");
-});
-</script>
+                        window.open(gmailURL, "_blank");
+                    });
+                </script>
             </div>
         </div>
     </footer>
     <hr class="my-5 border-secondary opacity-25">
-            <p class="text-center text-gray-600 text-sm">© 2026 Vaibhav Waghmare.</p>
+    <p class="text-center text-gray-600 text-sm">© 2026 Vaibhav Waghmare.</p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.halo.min.js"></script>
@@ -949,7 +1082,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 
     <script>
         AOS.init({ duration: 800, once: true });
-        
+
         VANTA.HALO({
             el: "#home",
             mouseControls: true,
@@ -970,4 +1103,5 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         });
     </script>
 </body>
+
 </html>
